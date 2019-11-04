@@ -24,23 +24,14 @@
 }
 
 #back-to-top {
-	position       : fixed;
-	display        : flex;
-	justify-content: center;
-	align-items    : center;
-	width          : 80px;
-	height         : 80px;
-	border-radius  : 50%;
-	box-shadow     : 2px 3px 6px rgba(black, .15);
-	bottom         : 150px;
-	transform      : translateY(50%);
-	background     : #ffffff;
-	right          : 30px;
-	cursor         : pointer;
-	z-index        : 5;
-	display        : none;
-	opacity        : 0;
-	transition     : all .3s ease-in-out;
+	cursor    : pointer;
+	position  : fixed;
+	bottom    : 150px;
+	right     : 30px;
+	z-index   : 5;
+	display   : none;
+	opacity   : 0;
+	transition: all .3s ease-in-out;
 
 	&.show {
 		opacity: 1;
@@ -89,6 +80,7 @@
 	font-style : italic;
 
 	color     : map-get($mau, trang);
+	border    : none;
 	background: map-get($mau, cam);
 	box-shadow: 4px 4px #E5E5E5;
 }
@@ -179,6 +171,77 @@
 					transform: scale(1) rotate(90deg);
 				}
 			}
+		}
+	}
+}
+
+.form-register {
+	position         : relative;
+	background-image : url(../assets/images/banner/bg-footer.png);
+	background-size  : cover;
+	background-repeat: no-repeat;
+	height           : 1040px;
+
+	.block-form {
+		position : absolute;
+		left     : 50%;
+		top      : 160px;
+		transform: translateX(-50%);
+
+		h3 {
+			color        : map-get($mau, xanh);
+			font-size    : 38px;
+			font-weight  : 700;
+			margin-bottom: 55px;
+		}
+
+		.form-group {
+			position: relative;
+			width   : 425px;
+			margin  : 0 auto 15px;
+
+			input,
+			select {
+				font-size    : 16px;
+				color        : map-get($mau, xanh);
+				background   : rgba($color: #FFFFFF, $alpha: .5);
+				box-shadow   : 0px 3px 6px rgba($color: #000000, $alpha: .16);
+				border       : none;
+				padding      : 0 25px;
+				line-height  : 55px;
+				width        : 100%;
+				border-radius: 50px;
+
+				&::placeholder {
+					color: map-get($mau, xanh);
+				}
+			}
+
+			select {
+				height    : 55px;
+				appearance: none;
+			}
+
+			&.select {
+				&:after {
+					content         : '';
+					position        : absolute;
+					right           : 25px;
+					top             : 50%;
+					width           : 25px;
+					height          : 10px;
+					transform       : translateY(-50%);
+					background-image: url(../assets/images/icons/select.svg);
+					pointer-events  : none;
+				}
+			}
+
+
+			button {
+				width      : 100%;
+				line-height: 55px;
+			}
+
 		}
 	}
 }
