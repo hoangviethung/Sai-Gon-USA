@@ -1,5 +1,6 @@
 // @import File Here !!!
 import map from "./map";
+import Mapping from "./mapping"
 
 // SLIDER
 const homeBanner = () => {
@@ -96,8 +97,26 @@ const clickGoTop = () => {
 	})
 }
 
+// MAPPING HTML
+const MoveFooter = () => {
+	let selector = document.querySelector('body .index-page');
+
+	if (selector) {
+		document.querySelector('footer').classList.add('index-page');
+		return new Mapping('footer', {
+			mobileNode: '.form-register',
+			mobileMethod: 'appendTo',
+			desktopNode: '.form-register',
+			desktopMethod: 'appendTo'
+		});
+	}
+}
+
 // CHẠY KHI ĐÃ LOAD PAGE XONG
 document.addEventListener("DOMContentLoaded", () => {
+	// MAPPING
+	MoveFooter();
+	// WOW
 	new WOW().init();
 	// GOOGLE MAP
 	map();
