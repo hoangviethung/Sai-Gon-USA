@@ -1,0 +1,23 @@
+.news-navigation {
+	display: flex;
+	border-bottom: 1px solid #E5E5E5;
+
+	.news-navigation-item {
+		font-size: 18px;
+		cursor: pointer;
+		padding: 10px 0;
+		transition: all .3s ease-out;
+
+		a {
+			color: #5D5D5D;
+		}
+
+		+.news-navigation-item {
+			margin-left: 100px;
+		}
+
+		&.active {
+			font-weight: 700;
+		}
+	}
+}

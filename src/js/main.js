@@ -1,137 +1,213 @@
-// @import File Here !!!
-import map from "./map";
-import Mapping from "./mapping"
+// Import js
+import Loading from './loading';
+import {
+	Tab
+} from "./tab";
 
-// SLIDER
+// Define functions
+
+// => scripts header
+const checkScrolled = () => {
+	if (window.scrollY > 0) {
+		document.querySelector('header').classList.add('scrolled')
+	} else {
+		document.querySelector('header').classList.remove('scrolled')
+	}
+}
+
+const activeHeaderMobile = () => {
+	const headerToggleBtn = document.querySelector('.bottom-header-mobile .header-toggle');
+	const headerMobile = document.querySelector('header .bottom-header');
+	const headerToggleOffBtn = document.querySelector('.bottom-header .toggle-off');
+	const overlay = document.querySelector('header .overlay');
+	const bodyHtml = document.querySelector('body');
+	headerToggleBtn.addEventListener('click', () => {
+		headerMobile.classList.add('active');
+		overlay.classList.add('active');
+		bodyHtml.style.overflow = 'hidden';
+		bodyHtml.style.height = window.innerHeight + 'px'
+	});
+	headerToggleOffBtn.addEventListener('click', () => {
+		headerMobile.classList.remove('active');
+		overlay.classList.remove('active');
+		bodyHtml.removeAttribute('style');
+	});
+	overlay.addEventListener('click', () => {
+		headerMobile.classList.remove('active');
+		overlay.classList.remove('active');
+		bodyHtml.removeAttribute('style');
+	});
+}
+
+const activeSearchDesktop = () => {
+	const headerSearchToggle = document.querySelector('header .header-search .icon');
+	headerSearchToggle.addEventListener('click', () => {
+		headerSearchToggle.classList.toggle('active');
+		headerSearchToggle.nextElementSibling.classList.toggle('active');
+	})
+}
+
+const setPaddingDangKyHocThu = () => {
+	const dangKyHocThu = document.querySelector('.trial-learning');
+	if (dangKyHocThu && window.innerWidth > 1024) {
+		const footer = document.querySelector('footer');
+		const paddingNeeded = footer.offsetHeight;
+		dangKyHocThu.style.paddingBottom = paddingNeeded + 'px';
+	} else {
+		dangKyHocThu.removeAttribute('style');
+	}
+}
+// => script trang chủ
 const homeBanner = () => {
-	return new Swiper('.home-banner .swiper-container', {
+	return new Swiper('.index-banner .swiper-container', {
+		slidesPerView: 1,
+		speed: 1000,
+		simulateTouch: false,
+		loop: true,
 		effect: 'fade',
 		fadeEffect: {
 			crossFade: true,
 		},
-		centeredSlides: true,
+		autoplay: {
+			delay: 4200,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			prevEl: '.index-banner .swiper-prev',
+			nextEl: '.index-banner .swiper-next'
+		},
+		pagination: {
+			el: '.index-banner .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		}
+	})
+}
+
+const staffSlider = () => {
+	return new Swiper('.differences-1-slider-wrapper .swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 45,
+		autoplay: {
+			delay: 4200,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 25,
+			},
+			769: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			576: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+		},
+		navigation: {
+			prevEl: '.differences-1-slider-wrapper .swiper-prev',
+			nextEl: '.differences-1-slider-wrapper .swiper-next',
+		}
+	})
+}
+
+const differencesSlider = () => {
+	return new Swiper('.differences-2 .swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		speed: 1000,
+		autoplay: {
+			delay: 4200,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.differences-2 .swiper-pagination',
+			clickable: true,
+			type: 'bullets',
+		}
+	})
+}
+
+const certificateSlider = () => {
+	const certificate1 = new Swiper('.certificate-1-slider-wrapper .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 20,
 		speed: 1000,
 		loop: true,
 		autoplay: {
-			delay: 5000,
+			delay: 4200,
 			disableOnInteraction: false,
 		},
-		breakpoints: {},
 		navigation: {
-			nextEl: '.home-banner .swiper-button-next',
-			prevEl: '.home-banner .swiper-button-prev',
+			prevEl: '.certificate-1-slider-wrapper .swiper-prev',
+			nextEl: '.certificate-1-slider-wrapper .swiper-next',
 		},
+		breakpoints: {
+			1025: {
+				slidesPerView: 2
+			},
+			767: {
+				slidesPerView: 1
+			}
+		}
+	})
+	const certificate2 = new Swiper('.certificate-2-slider-wrapper .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		speed: 1000,
+		loop: true,
+		autoplay: {
+			delay: 4200,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			prevEl: '.certificate-2-slider-wrapper .swiper-prev',
+			nextEl: '.certificate-2-slider-wrapper .swiper-next',
+		},
+		breakpoints: {
+			1025: {
+				slidesPerView: 2
+			},
+			767: {
+				slidesPerView: 1
+			}
+		}
 	})
 }
 
-// HEADER
-const activeHeader = () => {
-
-	let heightHeader = document.querySelector('header').offsetHeight;
-
-	if (window.scrollY > heightHeader) {
-		document.querySelector('header').classList.add('active');
-	} else {
-		document.querySelector('header').classList.remove('active');
-	}
-}
-
-// CONTROL SVG
-const fillColorSVG = () => {
-	jQuery('img.svg').each(function() {
-		var $img = jQuery(this);
-		var imgID = $img.attr('id');
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-
-		jQuery.get(imgURL, function(data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = jQuery(data).find('svg');
-
-			// Add replaced image's ID to the new SVG
-			if (typeof imgID !== 'undefined') {
-				$svg = $svg.attr('id', imgID);
-			}
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-			}
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-		}, 'xml');
-	});
-}
-
-// SHOW BUTTON BACK TO TOP
-const showBackToTop = () => {
-	let currentScroll = document.querySelector('body').clientHeight - (window.innerHeight + 200);
-	if (window.scrollY >= currentScroll) {
-		document.getElementById('back-to-top').style.display = 'flex';
-		setTimeout(() => {
-			document.getElementById('back-to-top').classList.add('show');
-		}, 0);
-	} else {
-		document.getElementById('back-to-top').style.display = 'none';
-		document.getElementById('back-to-top').classList.remove('show');
-	}
-}
-
-// CLICK GO TOP
-const clickGoTop = () => {
-	let goTopButton = document.getElementById('back-to-top')
-	goTopButton.addEventListener('click', () => {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		})
+const fancyboxGallery = () => {
+	$('.gallery-image-list .gallery-item .d-none a').fancybox({
+		hash: false,
+		thumbs: {
+			autoStart: true
+		}
+	})
+	$('.gallery-image-list .gallery-item').on('click', function(e) {
+		e.preventDefault();
+		$(this).siblings('.d-none').find('a').eq(0).trigger('click');
 	})
 }
 
-// MAPPING HTML
-const MoveFooter = () => {
-	let selector = document.querySelector('body .index-page');
-
-	if (selector) {
-		document.querySelector('footer').classList.add('index-page');
-		return new Mapping('footer', {
-			mobileNode: '.form-register',
-			mobileMethod: 'appendTo',
-			desktopNode: '.form-register',
-			desktopMethod: 'appendTo'
-		});
-	}
-}
-
-// CHẠY KHI ĐÃ LOAD PAGE XONG
-document.addEventListener("DOMContentLoaded", () => {
-	// MAPPING
-	MoveFooter();
-	// WOW
-	new WOW().init();
-	// GOOGLE MAP
-	map();
-	// SLIDER
+// Execute functions when document ready here
+document.addEventListener('DOMContentLoaded', () => {
+	Loading();
+	checkScrolled();
+	activeHeaderMobile();
+	activeSearchDesktop();
+	setPaddingDangKyHocThu();
+	//
 	homeBanner();
-	// CHANE COLOR SVG
-	fillColorSVG();
-	// BACK TO TOP
-	clickGoTop();
-})
+	staffSlider();
+	differencesSlider();
+	certificateSlider();
+	fancyboxGallery();
+});
 
-// CHẠY KHI WINDOWN SCROLL
 window.addEventListener('scroll', () => {
-	// HEADER
-	activeHeader();
-	// BACK TO TOP
-	showBackToTop();
+	checkScrolled();
+})
+window.addEventListener('resize', () => {
+	setPaddingDangKyHocThu();
 })

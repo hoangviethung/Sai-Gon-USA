@@ -14,9 +14,9 @@ import {
 	cleanDist
 } from "./.tasks/clean";
 import {
-	copyFonts,
+	copyFont,
 	copyFavicon,
-	copyAssets
+	copyAsset
 } from "./.tasks/copy";
 
 
@@ -24,8 +24,8 @@ exports.default = series(
 	cleanDist,
 	parallel(
 		copyFavicon,
-		copyFonts,
-		copyAssets
+		copyFont,
+		copyAsset
 	),
 	parallel(
 		jsCore,

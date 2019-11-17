@@ -10,10 +10,10 @@ import pugTask from "./html"
 import cssCore from "./core-css"
 import cssTask from "./css"
 import {
-	copyAssets
+	copyAsset
 } from "./copy";
 import {
-	cleanAssets
+	cleanAsset
 } from "./clean";
 
 export const server = () => {
@@ -39,16 +39,16 @@ export const server = () => {
 	}, series(pugTask));
 
 	watch([
-		"src/styles/**/**.scss"
+		"src/css/**/**.scss"
 	], {
 		delay: 750
 	}, series(cssTask));
 
 	watch([
-		"src/assets/**/**.{svg,png,jpg,speg,gif,mp4,flv,avi}"
+		"src/asset/**/**.{svg,png,jpg,speg,gif,mp4,flv,avi}"
 	], {
 		delay: 750
-	}, series(cleanAssets, copyAssets));
+	}, series(cleanAsset, copyAsset));
 
 
 	watch([

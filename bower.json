@@ -19,8 +19,6 @@
     "fancybox": "3.5.7",
     "swiper": "4.5.0",
     "lazysizes": "5.1.0",
-    "object-fit-images": "*",
-    "pickr": "@simonwep/pickr#^0.3.4",
-    "wow": "wowjs#^1.1.2"
+    "object-fit-images": "*"
   }
 }

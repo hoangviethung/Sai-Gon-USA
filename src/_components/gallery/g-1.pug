@@ -1,0 +1,21 @@
+.gallery-1.sect-pd
+	.container
+		h2.center.tagline.sect-title HÌNH ẢNH
+		.row.gallery-image-list
+			-for(let i =1;i<10;i++)
+				article.col-6.col-lg-4
+					a.gallery-item(href="#")
+						.img
+							img.lazyload(data-src="./asset/image/gallery/g_"+i+".jpg", alt="")
+						.text
+							h3 Những hoạt động ngoại khóa thú vị giúp trẻ em khám phá thế giới muôn màu đầy bổ ích
+					.d-none
+						a(href="./asset/image/gallery/g_"+i%3+".jpg" data-fancybox="gallery-image"+i)
+							img.lazyload(data-src="./asset/image/gallery/g_"+i%3+".jpg", alt="")
+						a(href="./asset/image/gallery/g_"+i%3+".jpg" data-fancybox="gallery-image"+i)
+							img.lazyload(data-src="./asset/image/gallery/g_"+i%3+".jpg", alt="")
+						a(href="./asset/image/gallery/g_"+i%3+".jpg" data-fancybox="gallery-image"+i)
+							img.lazyload(data-src="./asset/image/gallery/g_"+i%3+".jpg", alt="")
+		.row
+			.col-12
+				+pagination

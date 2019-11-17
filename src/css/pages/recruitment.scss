@@ -1,0 +1,40 @@
+.recruitment-2 {
+	.news-item {
+		margin-bottom: 20px;
+	}
+}
+
+.recruitment-1 {
+	[data-fancybox] {
+		display: block;
+		position: relative;
+
+		.btn-play {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 110px;
+			height: 110px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.recruitment-detail {
+	.news-social-share {
+		display: flex;
+
+		p {
+			a {
+				color: map-get($mau, cam);
+			}
+		}
+
+		span {
+			margin-left: auto;
+		}
+	}
+}

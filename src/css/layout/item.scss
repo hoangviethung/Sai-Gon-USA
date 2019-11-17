@@ -1,0 +1,328 @@
+.news-item {
+	a {
+		background-color: #F5F5F5;
+		padding: 40px;
+		display: flex;
+		border-radius: 10px;
+	}
+
+	.imgbox {
+		flex: 0 0 275px;
+		max-width: 275px;
+		height: 275px;
+		border-radius: 10px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			transition: all .3s ease-out;
+		}
+	}
+
+	.text {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+		padding-left: 40px;
+		padding-top: 30px;
+		position: relative;
+
+		time {
+			font-size: 24px;
+			font-weight: 300;
+			color: map-get($mau, main);
+			display: block;
+			margin-bottom: 15px;
+		}
+
+		h3 {
+			font-size: 24px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: #000000;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			max-height: 108px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			font-size: 18px;
+			-webkit-line-clamp: 3;
+			max-height: 81px;
+			color: #5D5D5D;
+		}
+
+		.img-readmore {
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			transition: all .3s ease-out;
+		}
+	}
+
+	@media (min-width: 1025px) {
+		&:hover {
+			.imgbox {
+				img {
+					transform: scale(1.1);
+				}
+			}
+
+			.text {
+				.img-readmore {
+					transform: rotateZ(270deg);
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1659.98px) {
+		a {
+			padding: 35px;
+		}
+
+		.imgbox {
+			flex: 0 0 240px;
+			max-width: 240px;
+			height: 240px;
+		}
+
+		.text {
+			padding-left: 35px;
+			padding-top: 25px;
+
+			time {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media (max-width: 1439.98px) {
+		a {
+			padding: 25px;
+		}
+
+		.imgbox {
+			flex: 0 0 210px;
+			max-width: 210px;
+			height: 210px;
+		}
+
+		.text {
+			padding-top: 15px;
+			padding-left: 15px;
+
+			time {
+				font-size: 22px;
+			}
+
+			h3 {
+				font-size: 22px;
+				max-height: 99px;
+			}
+		}
+	}
+
+	@media (max-width: 1199.98px) {
+		a {
+			padding: 20px;
+		}
+
+		.imgbox {
+			flex: 0 0 195px;
+			max-width: 195px;
+			height: 195px;
+		}
+
+		.text {
+
+			time {
+				font-size: 20px;
+				margin-bottom: 8px;
+			}
+
+			h3 {
+				font-size: 20px;
+				max-height: 90px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+
+		a {
+			padding: 15px;
+		}
+
+		.imgbox {
+			flex: 0 0 140px;
+			max-width: 140px;
+			height: 140px;
+		}
+
+		.text {
+			padding-top: 0;
+			padding-left: 10px;
+
+			h3 {
+				font-size: 18px;
+				-webkit-line-clamp: 2;
+				max-height: 54px;
+			}
+
+			time {
+				font-size: 18px;
+			}
+
+			.img-readmore {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		margin-bottom: 10px;
+
+		.imgbox {
+			flex: 0 0 95px;
+			max-width: 95px;
+			height: 95px;
+		}
+
+		.text {
+			time {
+				font-size: 16px;
+			}
+
+			h3 {
+				font-size: 16px;
+				max-height: 48px;
+			}
+
+			p {
+				-webkit-line-clamp: 2;
+				height: 42px;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.news-related-item {
+	margin-top: 10px;
+
+	a {
+		display: block;
+		padding: 25px;
+		background: #F5F5F5;
+		border-radius: 10px;
+	}
+
+	time {
+		font-size: 24px;
+		font-weight: 300;
+		display: block;
+		color: black;
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		font-size: 24px;
+		font-weight: 400;
+		color: black;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		max-height: 72px;
+	}
+
+	.imgbox {
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			transition: all .3s ease-out;
+		}
+	}
+
+	@media (min-width: 1025px) {
+		margin-top: 20px;
+
+		.text {
+			padding-top: 25px;
+		}
+
+		&:hover {
+			.imgbox {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1199.98px) {
+		a {
+			padding: 20px;
+		}
+
+		time {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		h3 {
+			font-size: 20px;
+			max-height: 60px;
+			margin-bottom: 15px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		a {
+			display: flex;
+		}
+
+		.imgbox {
+			flex: 0 0 85px;
+			max-width: 85px;
+		}
+
+		.text {
+			padding-left: 15px;
+			flex-basis: 0;
+			flex-grow: 1;
+			max-width: 100%;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		a {
+			padding: 15px;
+		}
+
+		.text {
+			h3 {
+				font-size: 16px;
+			}
+
+			time {
+				font-size: 16px;
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'SAIGON USA - CHUONG TRINH HOC CHI TIET – HIGHER SECONDARY/ YOUNG ADULT PROGRAM'
+	- let bodyClass = 'course-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/policy.jpg")
+	section.course-detail
+		.container
+			.row
+				.col-lg-5
+					.course-img
+						img.lazyload(data-src="./asset/image/course-img.png", alt="")
+				.col-lg-7
+					.course-info
+						h3 KINDY PROGRAM
+						h2 Aged: 3 - 6
+						p 
+							span Program Objectives: 
+							| This Program Is Intended 
+						p • To Have Very Young Learners Use All Their Senses To Learn But, At The Same Time, To Enjoy Themselves And To Have Fun
+						p • To Have Very Young Learners See Language As A Means Of Communication
+						p • To Have Listening And Speaking Skills Developed Slowly And Accurately (Although Speaking Skills Should Be Allowed To Develop Naturally When Children Feel Confident Enough)
+						p • To Offer A Wide Range Of Activities That Help The Learning Process
+						p • To Encourage The Development Of The Children's Social, Emotional And Spatial Skills By Encouraging Them To Work Together, To Play, Resolve Problems And Reproduce Actions And Key Language
+						p • To Have Children Experience The Act Of Language Learning As A Positive One Right From The Beginning And Are Enthusiastic And Motivated By The Activities They Are Required To Do
+						p • To Develop And Encourage An Open And Inclusive Attitude To Other People And Cultures And To Underline And Encourage Key Social Values Such As The Values Of Friendship And Helping And Appreciating One Another
+						br
+						p
+							span Notes: 
+							| Phonics & Math Are Included In Each Course
+	include _components/courses/cd_3
+	include _components/_layout/_trial-learning
+block scripts

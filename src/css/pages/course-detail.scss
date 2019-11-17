@@ -1,0 +1,307 @@
+.course-detail {
+	background-image: url('../asset/image/course_bg_3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.row {
+		align-items: center;
+	}
+
+	.course-img {
+		padding-top: 60px;
+		margin-bottom: -150px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media (max-width: 1199.98px) {
+			max-width: 450px;
+			padding-top: 0;
+			margin-bottom: 0;
+		}
+
+		@media (max-width: 767.98px) {
+			max-width: 290px;
+		}
+	}
+
+	.course-info {
+		color: white;
+		padding: 100px 0;
+
+		h3 {
+			font-size: 30px;
+		}
+
+		h2 {
+			font-size: 70px;
+			font-family: 'SFU Garamond Condensed', sans-serif;
+			margin-bottom: 30px;
+			margin-top: -3%;
+		}
+
+		p {
+			font-size: 18px;
+
+			span {
+				color: map-get($mau, cam);
+			}
+		}
+
+		@media (max-width: 1199.98px) {
+			padding: 50px;
+
+			h3 {
+				font-size: 26px;
+			}
+
+			h2 {
+				font-size: 55px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			h3 {
+				font-size: 24px;
+			}
+
+			h2 {
+				font-size: 50px;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			padding: 20px 0;
+
+			h3 {
+				font-size: 22px;
+			}
+
+			h2 {
+				font-size: 45px;
+				margin-bottom: 15px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.course-image {
+	background: #F5F5F5;
+
+	h3 {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	.block-content {
+		max-width: 1340px;
+		margin: 0 auto;
+		padding: 90px 10px;
+
+		@media (max-width: 1199.98px) {
+			padding: 60px 10px;
+		}
+
+		@media (max-width: 767.98px) {
+			padding: 30px 10px;
+		}
+	}
+
+	.list-items {
+		justify-content: space-between;
+
+		.col-item {
+			.imgbox {
+				margin: 0 auto;
+				width: 265px;
+				height: 265px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: rgba(white, .5);
+				box-shadow: 0 3px 6px rgba(black, .15);
+				border-radius: 5px;
+				position: relative;
+
+				svg {
+					margin-bottom: 45px;
+					max-width: 145px;
+				}
+
+				&:before {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					border: 1px solid map-get($mau, cam);
+					border-radius: 5px;
+					top: -8px;
+					left: -8px;
+					content: '';
+					z-index: 0;
+				}
+			}
+
+			h3 {
+				position: absolute;
+				bottom: 28px;
+				margin-bottom: 0 !important;
+				width: 100%;
+				left: 0;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 24px;
+				color: #757575;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			.col-item {
+				.imgbox {
+					width: 200px;
+					height: 200px;
+
+					svg {
+						margin-bottom: 45px;
+						max-width: 80px;
+					}
+				}
+
+				h3 {
+					font-size: 21px;
+				}
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			margin-bottom: -30px;
+
+			.col-item {
+				display: flex;
+				margin-bottom: 30px;
+
+				.imgbox {
+					width: 100px;
+					height: 100px;
+					margin-left: 0;
+					margin-right: 0;
+
+					&:before {
+						top: 0;
+						left: 0;
+					}
+
+					svg {
+						margin-bottom: 0;
+						max-width: 50px;
+					}
+				}
+
+				h3 {
+					font-size: 18px;
+					left: 120px;
+					width: auto;
+					white-space: nowrap;
+					margin-left: 20px;
+					top: 050%;
+					bottom: unset;
+					transform: translateY(-50%);
+
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1199.98px) {
+		h3 {
+			font-size: 21px;
+			margin-bottom: 24px;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		h3 {
+			font-size: 18px;
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.course-content {
+	.table-responsive {
+		table{
+			margin-bottom: 20px;
+		}
+		span {
+			font-size: 20px;
+			font-style: italic;
+			color: map-get($mau, cam);
+		}
+	}
+
+	.block-content {
+		max-width: 1340px;
+		margin: 0 auto;
+		padding: 90px 10px;
+
+		h3 {
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+
+		p {
+			font-size: 18px;
+			margin-bottom: 8px;
+		}
+
+		table {
+
+			th,
+			td {
+				border: 1px solid #CCCCCC;
+				vertical-align: middle;
+				text-align: center;
+				height: 70px;
+			}
+
+			th {
+				background: map-get($mau, main);
+				color: white;
+			}
+		}
+
+		@media (max-width: 1199.98px) {
+			padding: 60px 10px;
+
+			h3 {
+				font-size: 21px;
+				margin-bottom: 24px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			padding: 30px 10px;
+
+			h3 {
+				font-size: 18px;
+				margin-bottom: 16px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}

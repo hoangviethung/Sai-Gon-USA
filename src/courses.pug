@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Chương trình đào tạo'
+	- let bodyClass = 'course-learning-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/policy.jpg", 'Chương trình đào tạo')
+	include _components/courses/c-1
+	include _components/_layout/_trial-learning
+block scripts

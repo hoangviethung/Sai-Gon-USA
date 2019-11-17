@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Chứng nhận'
+	- let bodyClass = 'certificate-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/certificate.jpg", title)
+	include _components/about/a-2
+	include _components/_layout/_trial-learning
+block scripts

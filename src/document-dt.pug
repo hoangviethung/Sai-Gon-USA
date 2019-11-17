@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Tài liệu chia sẻ'
+	- let bodyClass = 'document-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/news.jpg", title)
+	include _components/document/d-detail
+	include _components/_layout/_trial-learning
+block scripts

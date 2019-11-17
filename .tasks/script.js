@@ -26,9 +26,7 @@ export const jsTask = () => {
 		.pipe(source('main.js'))
 		.pipe(buffer())
 		.pipe(plumber(function(err) {
-			console.log("========= ERROR! =========");
 			console.log(err);
-			console.log("=========================");
 			this.emit('end');
 		}))
 		.pipe(sourcemap.init({
@@ -38,8 +36,8 @@ export const jsTask = () => {
 		.pipe(rename({
 			suffix: ".min"
 		}))
-		.pipe(sourcemap.write('./'))
+		.pipe(sourcemap.write('.'))
 		.pipe(dest('./_dist/js'));
-}
+};
 
 module.exports = jsTask;

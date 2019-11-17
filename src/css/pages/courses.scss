@@ -1,0 +1,177 @@
+.courses-list {
+	padding-top: 90px;
+
+	@media (max-width: 1199.98px) {
+		padding-top: 60px;
+	}
+
+	@media (max-width: 767.98px) {
+		padding-top: 30px;
+	}
+}
+
+.courses {
+	padding-bottom: 90px;
+
+	.list-items {
+		margin: 0 -5px;
+	}
+
+	.item {
+		padding: 0 5px;
+		max-width: 33.333%;
+		float: left;
+
+		.imgbox {
+			width: 100%;
+			border-radius: 5px;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.text {
+			padding-top: 20px;
+			height: 128px;
+
+			h3 {
+				font-size: 24px;
+				color: map-get($mau, main);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				max-height: 72px;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-size: 24px;
+				text-transform: uppercase;
+				color: #5D5D5D;
+			}
+		}
+
+		&:nth-child(2n+1) {
+			.imgbox {
+				height: 843px;
+			}
+		}
+
+		&:nth-child(2n) {
+			.imgbox {
+				height: 357px;
+			}
+		}
+
+		&:nth-child(3) {
+			float: right;
+		}
+	}
+
+	@media (max-width: 1659.98px) {
+		.item {
+			&:nth-child(2n+1) {
+				.imgbox {
+					height: 730px;
+				}
+			}
+
+			&:nth-child(2n) {
+				.imgbox {
+					height: 301px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1439.98px) {
+		.item {
+			&:nth-child(2n+1) {
+				.imgbox {
+					width: 100%;
+					height: 630px;
+				}
+			}
+
+			&:nth-child(2n) {
+				.imgbox {
+					height: 251px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1199.98px) {
+		padding-bottom: 60px;
+
+		.item {
+			&:nth-child(2n+1) {
+				.imgbox {
+					width: 100%;
+					height: 548px;
+				}
+			}
+
+			&:nth-child(2n) {
+				.imgbox {
+					height: 217px;
+				}
+			}
+
+			.text {
+				height: 115px;
+				padding-top: 15px;
+
+				h3,
+				p {
+					font-size: 21px;
+					max-height: 61px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		padding-top: 60px;
+
+		.item {
+			max-width: 50%;
+
+			&:nth-child(2n+1) {
+				.imgbox {
+					height: auto;
+				}
+			}
+
+			&:nth-child(2n) {
+				.imgbox {
+					height: auto;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		.item {
+			.text {
+				padding-top: 10px;
+				height: 95px;
+
+				h3,
+				p {
+					text-transform: capitalize;
+					font-size: 18px;
+					max-height: 54px;
+				}
+			}
+		}
+	}
+}

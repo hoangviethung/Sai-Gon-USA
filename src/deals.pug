@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Ưu đãi'
+	- let bodyClass = 'news-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/policy.jpg", title)
+	include _components/news/n-2
+	include _components/_layout/_trial-learning
+block scripts

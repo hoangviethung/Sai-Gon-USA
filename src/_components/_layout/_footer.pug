@@ -1,50 +1,41 @@
 footer
-	.container
-		.row
-			.col-lg-2
-				.logo
-				img.svg(src="./assets/logo-white.svg", alt="")
-			.col-lg-7.list-link-footer
-				.block-link
-					ul.list-item
-						li.item
-							a(href="#") GIỚI THIỆU
-						li.item
-							a(href="#") CHƯƠNG TRÌNH HỌC
-						li.item
-							a(href="#") GÓC HỌC VIÊN
-				.block-link
-					ul.list-item
-						li.item
-							a(href="#") TIN TỨC - SỰ KIỆN
-						li.item
-							a(href="#") LIÊN HỆ
-						li.item
-							a(href="#") ƯU ĐÃI
-				.block-link
-					ul.list-item
-						li.item
-							a(href="#") THƯ VIỆN
-						li.item
-							a(href="#") Q&A
-				.block-link
-					ul.list-item
-						li.item
-							a(href="#") CHÍNH SÁCH QUY ĐỊNH
-						li.item
-							a(href="#") HỘ TRỢ HOTLINE
-			.col-lg-3.form-email
-				.title-footer Hãy gửi email đến chúng tôi để nhận những thông báo mới nhất và những chương trình hấp dẫn nhất  dành cho bạn.
-				form(action="#" method="method")
-					.form-group
-						input(type="text" placeholder="Email")
-						button GỬI
-				ul.list-social-media
-					il.item
+	.top-footer
+		.container
+			.row
+				.col-lg-2.footer-logo
+					a(href="#")
+						img(src="./asset/image/logo_2.png")
+				.col-lg.footer-navigation
+					.row
+						.col-lg-auto.col-6
+							nav
+								a(href="gioithieu.html") Giới thiệu
+								a(href="#") Chương trình học
+								a(href="#") Góc học viên
+						.col-lg-auto.col-6
+							nav
+								a(href="#") Tin tức - Sự kiện
+								a(href="#") Liên hệ
+								a(href="#") Ưu đãi
+						.col-lg-auto.col-6
+							nav
+								a(href="gallery-1.html") Hình ảnh
+								a(href="gallery-2.html") Video
+								a(href="#") Q&A
+						.col-lg-auto.col-6
+							nav
+								a(href="#") Chính sách quy định
+								a(href="#") Hỗ trợ hotline
+				.col-lg-3.footer-subscribe
+					p Hãy gửi email đến chúng tôi để nhận những thông báo mới nhất và những chương trình hấp dẫn nhất dành cho bạn.
+					form
+						input(type='text' placeholder="Email")
+						button.btn.btn-send Gửi
+					nav.footer-social
 						a(href="#") + facebook
-					li.item
 						a(href="#") + instagram
-					li.item
-						a(href="#") + google
-.copy-right
-	p © 2019 Copyright by Web4G Solutions. All rights reserved.
+	.bottom-header
+		.container
+			p © 2019 Copyright by 
+				a(href="https://web4gsolutions.com") Web4G Solutions 
+				| . All rights reserved.

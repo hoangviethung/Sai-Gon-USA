@@ -1,9 +1,10 @@
-extends _components/_layout/_layout
+extends _components/_layout/_layout.pug
 
 block var
-	- var title = 'SÀI GÒN USA | Trang Chủ';
-	- var bodyClass = 'index-page';
+	- let title = 'Index'
+	- let bodyClass = 'index-page'
 
+block banner,breadcrumb
 block main
 	include _components/index/banner
 	include _components/index/i-1
@@ -11,4 +12,5 @@ block main
 	include _components/index/i-3
 	include _components/index/i-4
 	include _components/index/i-5
-	include _components/form-register/f-1
+	include _components/_layout/_trial-learning
+block scripts

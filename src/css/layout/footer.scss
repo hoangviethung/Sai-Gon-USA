@@ -1,0 +1,143 @@
+footer {
+	background-color: rgba(black, .55);
+
+	.top-footer {
+		padding: 80px 0 50px 0;
+
+		@media (max-width: 1199.98px) {
+			padding: 35px 0;
+		}
+
+		@media (max-width: 767.98px) {
+			padding: 20px 0;
+		}
+	}
+
+	.bottom-header {
+		background-color: #70AD3A;
+		padding: 10px 0;
+
+		p {
+			text-align: center;
+			font-size: 14px;
+			color: rgba(#E5E5E5, .4);
+
+			a {
+				color: rgba(#E5E5E5, .4);
+			}
+		}
+	}
+
+	.footer-logo {
+		@media (max-width: 1024px) {
+			text-align: center;
+		}
+	}
+
+	.footer-navigation {
+		nav {
+			a {
+				display: block;
+				text-transform: uppercase;
+				color: white;
+				font-weight: 300;
+
+				+a {
+					margin-top: 16px;
+				}
+			}
+		}
+
+		@media (min-width: 1025px) {
+			padding: 0 30px;
+
+			.row {
+				justify-content: space-between;
+			}
+		}
+
+		@media (max-width: 1199.98px) {
+			nav {
+				a {
+					font-size: 15px;
+				}
+			}
+		}
+
+		@media (max-width: 1024px) {
+			padding: 20px 10px;
+
+			nav {
+				padding: 15px 0;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			nav {
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.footer-subscribe {
+		p {
+			color: white;
+			font-size: 12px;
+			font-weight: 300;
+			margin-bottom: 5px;
+		}
+
+		form {
+			position: relative;
+		}
+
+		input {
+			height: 45px;
+			border-radius: 23px;
+			background-color: rgba(white, .25);
+			border: 0;
+			padding: 7px 15px;
+			width: 100%;
+			color: white;
+			font-size: 14px;
+
+			&::placeholder {
+				color: white;
+				font-size: 14px;
+				font-weight: 300;
+			}
+		}
+
+		.btn-send {
+			position: absolute;
+			top: 0;
+			height: 45px;
+			border-radius: 23px;
+			right: 0;
+		}
+	}
+
+	.footer-social {
+		padding-top: 20px;
+		text-align: right;
+
+		a {
+			font-size: 14px;
+			color: rgba(#F5F5F5, .5);
+
+			+a {
+				margin-left: 25px;
+			}
+
+			&:hover {
+				color: map-get($mau, main);
+			}
+		}
+
+		@media (max-width: 1024px) {
+			text-align: center;
+		}
+	}
+}

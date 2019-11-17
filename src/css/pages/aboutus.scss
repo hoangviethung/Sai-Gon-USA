@@ -1,0 +1,45 @@
+.aboutus {
+	.content {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+		font-size: 24px;
+
+		p {
+			color: #5D5D5D;
+		}
+
+		h3,
+		h1,
+		h2,
+		h5,
+		h4,
+		h6 {
+			color: #5D5D5D;
+		}
+
+		@media (max-width: 1199.98px) {
+			font-size: 21px;
+		}
+
+		@media (max-width: 767.98px) {
+			font-size: 18px;
+		}
+	}
+
+	a[data-fancybox] {
+		display: block;
+		position: relative;
+
+		.button-play {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 175px;
+			height: 175px;
+			z-index: 2;
+			transform: translate(-50%, -50%);
+
+		}
+	}
+}

@@ -1,25 +1,24 @@
 {
 	"build": true,
-
-	"filePath": [],
-
+	"filePath": [
+		"./src/chuongtrinhdaotao.pug"
+	],
 	"vendor": {
 		"font": [
-			"src/fonts/**",
-			"bower_components/mdi/fonts/**",
-			"bower_components/font-awesome/webfonts/**",
-			"bower_components/linearicons/dist/web-font/fonts/**"
+			"src/fonts/**"
 		],
 		"js": [
-			"node_modules/@simonwep/pickr/dist/pickr.es5.min.js",
-			"bower_components/jquery/dist/jquery.min.js",
+			"vendors/polyfill.js",
+			"bower_components/jquery/dist/jquery.js",
 			"bower_components/swiper/dist/js/swiper.js",
-			"bower_components/wow/dist/wow.js"
+			"bower_components/lazysizes/lazysizes.js",
+			"bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.js",
+			"bower_components/object-fit-images/dist/ofi.browser.js",
+			"bower_components/fancybox/dist/jquery.fancybox.js"
 		],
 		"css": [
-			"node_modules/@simonwep/pickr/dist/themes/classic.min.css",
 			"bower_components/swiper/dist/css/swiper.css",
-			"bower_components/wow/css/libs/animate.css"
+			"bower_components/fancybox/dist/jquery.fancybox.css"
 		]
 	}
 }

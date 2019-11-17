@@ -222,7 +222,7 @@
 	},
 	"uppercase": {
 		"scope": "css,less,scss",
-		"prefix": "tup",
+		"prefix": "ttu",
 		"body": [
 			"text-transform: uppercase;",
 		]

@@ -1,0 +1,88 @@
+.contact-1 {
+	background: #F5F5F5;
+
+	.contact-form {
+		max-width: 890px;
+	}
+
+	.col-sect-title {
+		margin-bottom: 40px;
+	}
+
+	.form-group {
+		margin-bottom: 15px;
+
+		input[type='text'],
+		select {
+			height: 55px;
+			box-shadow: 0 3px 6px #E5E5E5;
+			width: 100%;
+			border: 0;
+			padding: 7px 25px;
+			border-radius: 50px;
+			color: #5D5D5D;
+			font-size: 16px;
+			font-weight: 300;
+
+			&::placeholder {
+				color: #5D5D5D;
+				font-size: 16px;
+			}
+		}
+
+		&.col-12 {
+			margin-top: 30px;
+
+			p {
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.form-check {
+		display: inline-block;
+		width: 33.3333%;
+
+		label {
+			padding-left: 35px;
+			position: relative;
+			font-size: 14px;
+			cursor: pointer;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 21px;
+				height: 21px;
+				background: white;
+				border: 4px solid white;
+				border-radius: 5px;
+				left: 0;
+				top: 1px;
+			}
+		}
+
+		input {
+			display: none;
+
+			&:checked~label {
+				&:before {
+					background: map-get($mau, main);
+				}
+			}
+		}
+	}
+
+	.form-button {
+		text-align: center;
+		margin-top: 45px;
+		;
+
+		.btn {
+			height: 55px;
+			max-width: 435px;
+			width: 100%;
+		}
+	}
+}

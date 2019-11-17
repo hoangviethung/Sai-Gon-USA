@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Tuyển dụng'
+	- let bodyClass = 'recruitment-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/news.jpg", title)
+	include _components/recruitment/r-1
+	include _components/_layout/_trial-learning
+block scripts

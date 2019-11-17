@@ -1,0 +1,159 @@
+.vision {
+	img {
+		width: 100%;
+	}
+
+	.together-block {
+		background: #F5F5F5;
+
+		.row.no-gutters {
+			align-items: center;
+		}
+
+		.text {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 690px;
+
+			h4 {
+				font-size: 30px;
+				color: map-get($mau, main);
+				margin-bottom: 10px;
+			}
+
+			h3 {
+				font-size: 70px;
+				font-family: 'SFU Garamond There';
+				line-height: 1.1;
+				color: #5D5D5D;
+				margin-bottom: 25px;
+			}
+
+			p {
+				font-size: 24px;
+				color: #5D5D5D;
+				margin-bottom: 15px;
+			}
+
+			@media (max-width: 1439px) {
+				h3 {
+					font-size: 55px;
+				}
+
+				h4 {
+					font-size: 28px;
+				}
+
+				p {
+					font-size: 22px;
+				}
+			}
+
+			@media (max-width: 1199.98px) {
+				h3 {
+					font-size: 40px;
+				}
+
+				h4 {
+					font-size: 26px;
+				}
+
+				p {
+					font-size: 20px;
+					margin-bottom: 10px;
+				}
+			}
+
+			@media (max-width: 1024px) {
+				max-width: 100%;
+
+				h3 {
+					font-size: 30px;
+				}
+
+				h4 {
+					font-size: 22px;
+				}
+			}
+
+			@media (max-width: 767.98px) {
+				h3 {
+					font-size: 28px;
+					margin-bottom: 15px;
+				}
+
+				h4 {
+					font-size: 22px;
+				}
+
+				p {
+					font-size: 16px;
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+
+	.col-xl-6.col-lg-7 {
+		padding: 0 80px;
+
+		@media (max-width: 1439px) {
+			padding: 0 40px;
+		}
+
+		@media (max-width: 1199.98px) {
+			padding: 0 15px;
+		}
+
+		@media (max-width: 1024px) {
+			padding: 20px;
+		}
+
+		@media (max-width: 767.98px) {
+			padding: 20px 10px;
+		}
+	}
+
+	.vision-text {
+		padding-top: 90px;
+		padding-bottom: 90px;
+
+		.text {
+			width: 100%;
+			max-width: 1200px;
+
+			p {
+				font-size: 24px;
+				margin-bottom: 35px;
+			}
+		}
+
+		@media (max-width: 1199.98px) {
+			padding-top: 60px;
+			padding-bottom: 60px;
+
+			.text {
+				p {
+					font-size: 21px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+
+			.text {
+				p {
+					font-size: 18px;
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+}

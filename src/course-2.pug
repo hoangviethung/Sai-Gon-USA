@@ -1,0 +1,35 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'SAIGON USA - CHUONG TRINH HOC CHI TIET – HIGHER SECONDARY/ YOUNG ADULT PROGRAM'
+	- let bodyClass = 'course-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/policy.jpg")
+	section.course-detail
+		.container
+			.row
+				.col-lg-5
+					.course-img
+						img.lazyload(data-src="./asset/image/course-img.png", alt="")
+				.col-lg-7
+					.course-info
+						h3 PRIMARY PROGRAM
+						h2 Aged: 6 - 11
+						p 
+							span Program Objectives: 
+							| This Program Is Built Around A CEFR-Based Curriculum And Is Intended
+						p • For Students To Find The Learning Process Enjoyable As They Embark On Their Journey To Discover The English Language
+						p • To Take Them Gradually From Producing Simple Phrases To Complete Sentences In A Widening Range Of Topic Areas And Situations
+						p • To Build Their Knowledge Of High-Frequency Vocabulary, Common Grammar Structures, And Useful Expressions
+						p • To Get Them Exposed To Natural Speech, In An Interactive Context Where They Can Obtain Information On The Structure And The Function Of English In A Fun Environment
+						p • To Provide Students With Opportunities To Learn English Through The Study Of Other Subjects (CLIL)
+						p • To Get Them Familiar With And Ready For The 2018 CYLET: Starters – Movers – Flyers
+						br
+						p
+							span Notes: 
+							| The Program Provides A Full Set Of Tests (Placement, Unit, Midterm, And Final Tests) 
+	include _components/courses/cd_2
+	include _components/_layout/_trial-learning
+block scripts

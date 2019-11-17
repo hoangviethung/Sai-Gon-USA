@@ -1,16 +1,31 @@
-section.home-banner
+.index-banner
 	.swiper-container
 		.swiper-wrapper
-			-for(i=1;i<4;i++)
-				.swiper-slide
-					figure
-						img.ofc(src="./assets/images/banner/home-banner-1.png", alt="")
-						figcaption
-							h5 Cùng SAIGON USA
-							h3 Vun đắp hôm nay
-								br
-								| đón chào tương lai
-							a(href="#").btn Tìm hiểu thêm
-		.swiper-pagination
-		.swiper-button-prev
-		.swiper-button-next
+			.swiper-slide
+				.imgbox
+					img(src="./asset/image/banner/homepage.jpg", alt="")
+				.caption
+					p Cùng SAIGON USA
+					h2 Vun đắp hôm nay đón chào tương lai
+					a.btn.btn-readmore(href="#") Tìm hiểu thêm
+			.swiper-slide
+				.imgbox
+					img(src="./asset/image/banner/homepage.jpg", alt="")
+				.caption
+					p Cùng SAIGON USA
+					h2 Vun đắp hôm nay đón chào tương lai
+					a.btn.btn-readmore(href="#") Tìm hiểu thêm
+			.swiper-slide
+				.imgbox
+					img(src="./asset/image/banner/homepage.jpg", alt="")
+				.caption
+					p Cùng SAIGON USA
+					h2 Vun đắp hôm nay đón chào tương lai
+					a.btn.btn-readmore(href="#") Tìm hiểu thêm
+		.container.swiper-pagination-wrapper
+			.swiper-pagination
+		.swiper-navigate
+			.swiper-prev
+				<svg xmlns="http://www.w3.org/2000/svg" width="37.651" height="27.775" viewBox="0 0 37.651 27.775"><g transform="translate(37.651 27.775) rotate(180)"><g transform="translate(0 0)"><g transform="translate(0 10.312)"><path d="M2.932,17.463,0,16.382C6.018-.128,20.368-.128,31.787.026h2.16V3.112h-2.16C20.214,3.112,8.178,2.958,2.932,17.463Z" transform="translate(0 0)" fill="#fff"/></g><g transform="translate(23.609 0)"><path d="M2.16,23.761,0,21.6l9.721-9.72L0,2.16,2.16,0,14.042,11.881Z" transform="translate(0 0)" fill="#fff"/></g></g></g></svg>
+			.swiper-next
+				<svg xmlns="http://www.w3.org/2000/svg" width="37.651" height="27.775" viewBox="0 0 37.651 27.775"><g transform="translate(0 0)"><g transform="translate(0 10.312)"><path d="M40.932,63.446,38,62.366c6.018-16.511,20.368-16.511,31.787-16.356h2.16V49.1h-2.16C58.214,49.1,46.178,48.941,40.932,63.446Z" transform="translate(-38 -45.983)" fill="#fff"/></g><g transform="translate(23.609 0)"><path d="M55.46,63.063,53.3,60.9l9.721-9.721L53.3,41.46l2.16-2.16L67.342,51.182Z" transform="translate(-53.3 -39.3)" fill="#fff"/></g></g></svg>

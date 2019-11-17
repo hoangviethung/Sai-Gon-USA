@@ -1,0 +1,195 @@
+.news {
+	.news-list {
+		.col-12 {
+			+.col-12 {
+				.news-item {
+					@media (min-width: 768px) {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.news-item {
+		@media (max-width: 1659.98px) {
+			.imgbox {
+				flex: 0 0 275px;
+				max-width: 275px;
+				height: 275px;
+			}
+		}
+
+		@media (max-width: 1439.98px) {
+			.imgbox {
+				flex: 0 0 275px;
+				max-width: 275px;
+				height: 275px;
+			}
+		}
+
+		@media (max-width: 1199.98px) {
+			.imgbox {
+				flex: 0 0 275px;
+				max-width: 275px;
+				height: 275px;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			.imgbox {
+				flex: 0 0 140px;
+				max-width: 140px;
+				height: 140px;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			margin-bottom: 10px;
+
+			.imgbox {
+				flex: 0 0 95px;
+				max-width: 95px;
+				height: 95px;
+			}
+		}
+	}
+}
+
+.news-detail {
+	.news-title {
+		h1 {
+			font-size: 24px;
+		}
+
+		time {
+			display: block;
+			font-size: 16px;
+		}
+	}
+
+	.news-content {
+		padding-top: 30px;
+		padding-right: 50px;
+
+		p,
+		ul,
+		ol,
+		dl {
+			color: #5D5D5D;
+			font-size: 18px
+		}
+	}
+
+	.news-related-col {
+		h2 {
+			font-size: 24px;
+			color: map-get($mau, main);
+			font-weight: 400;
+			text-transform: uppercase;
+			margin-bottom: 45px;
+		}
+
+		@media (min-width: 1025px) {
+			max-width: 460px;
+		}
+	}
+
+	.news-social-share {
+		text-align: right;
+		margin-top: 25px;
+
+		span {
+			display: inline-block;
+			margin-right: 15px;
+			font-size: 16px;
+		}
+
+		a {
+			font-size: 16px;
+			color: darken(white, 25%);
+			display: inline-block;
+
+			+a {
+				margin-left: 25px;
+			}
+
+			&:hover {
+				color: map-get($mau, main);
+			}
+		}
+	}
+
+	@media (max-width: 1199.98px) {
+
+		.news-content {
+			padding-top: 20px;
+		}
+
+		.news-title {
+			h1 {
+				font-size: 20px;
+			}
+
+			time {
+				font-size: 15px;
+			}
+		}
+
+		.news-content {
+			padding-right: 25px;
+
+			p,
+			ul,
+			ol,
+			dl {
+				font-size: 16px
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.news-content {
+			padding-right: 0;
+		}
+
+		.news-related-col {
+			margin-top: 40px;
+
+			h2 {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+
+		.news-content {
+			padding-top: 10px;
+		}
+
+		.news-title {
+			h1 {
+				font-size: 16px;
+			}
+
+			time {
+				font-size: 14px;
+			}
+		}
+
+		.news-related-col {
+			margin-top: 20px;
+		}
+
+		.news-content {
+
+			p,
+			ul,
+			ol,
+			dl {
+				font-size: 14px
+			}
+		}
+	}
+}

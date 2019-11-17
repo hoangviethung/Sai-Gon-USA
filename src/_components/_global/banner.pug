@@ -1,0 +1,7 @@
+mixin banner(img, title)
+	.page-banner
+		.imgbox
+			img.lazyload(data-src=img)
+		-if(title)
+			.page-name
+				h2= title

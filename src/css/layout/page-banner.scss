@@ -1,0 +1,55 @@
+.page-banner {
+	position: relative;
+
+	.imgbox {
+		img {
+			width: 100%;
+		}
+	}
+
+	.page-name {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 610px;
+		width: 100%;
+
+		h2 {
+			color: white;
+			text-transform: uppercase;
+			font-size: 54px;
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 1439.98px) {
+		.page-name {
+			max-width: 480px;
+
+			h2 {
+				font-size: 48px;
+			}
+		}
+	}
+
+	@media (max-width: 1199.98px) {
+		.page-name {
+			max-width: 350px;
+
+			h2 {
+				margin-top: 30px;
+				font-size: 38px;
+			}
+		}
+	}
+
+	@media (max-width: 576px) {
+		.page-name {
+			h2 {
+				margin-top: 20px;
+				font-size: 16px;
+			}
+		}
+	}
+}
