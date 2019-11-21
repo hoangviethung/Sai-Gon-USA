@@ -14,11 +14,13 @@
 			"bower_components/lazysizes/lazysizes.js",
 			"bower_components/lazysizes/plugins/unveilhooks/ls.unveilhooks.js",
 			"bower_components/object-fit-images/dist/ofi.browser.js",
-			"bower_components/fancybox/dist/jquery.fancybox.js"
+			"bower_components/fancybox/dist/jquery.fancybox.js",
+			"bower_components/wow/dist/wow.js"
 		],
 		"css": [
 			"bower_components/swiper/dist/css/swiper.css",
-			"bower_components/fancybox/dist/jquery.fancybox.css"
+			"bower_components/fancybox/dist/jquery.fancybox.css",
+			"bower_components/wow/css/libs/animate.css"
 		]
 	}
 }

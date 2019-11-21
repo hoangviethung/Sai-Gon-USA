@@ -1,12 +1,12 @@
 extends _components/_layout/_layout.pug
 
 block var
-	- let title = 'Liên hệ'
-	- let bodyClass = 'contact-page'
+	- let title = 'Góc học viên'
+	- let bodyClass = 'student-page'
 
 block banner,breadcrumb
 block main
 	+banner("./asset/image/banner/news.jpg", title)
-	include _components/contact/c-1
+	include _components/student/s-1
 	include _components/_layout/_trial-learning
 block scripts

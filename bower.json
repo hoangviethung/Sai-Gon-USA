@@ -19,6 +19,8 @@
     "fancybox": "3.5.7",
     "swiper": "4.5.0",
     "lazysizes": "5.1.0",
-    "object-fit-images": "*"
+    "object-fit-images": "*",
+    "aos": "^2.3.4",
+    "wow": "wow-mit#^1.3.0"
   }
 }

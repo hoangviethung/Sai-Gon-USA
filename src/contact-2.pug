@@ -1,0 +1,35 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Đặt lịch test'
+	- let bodyClass = 'contact-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/news.jpg", title)
+	include _components/contact/c-2
+	include _components/contact/map
+	include _components/_layout/_trial-learning
+block scripts
+	script.
+		var locationsInput = [
+			{
+				lat: 16.061979,
+				lng: 108.215886,
+				name: 'Văn phòng Công ty',
+				icon: "./img/circle.png",
+				address: '115 Lê Đình Dương, Tp.Đà Nẵng',
+				phone: '0236 3584 606',
+				optimized: false
+			},
+			{
+				lat: 10.822517,
+				lng: 106.861143,
+				name: 'Showroom 2',
+				icon: "./img/circle.png",
+				address: '115 Lê Đình Dương, Tp.Đà Nẵng',
+				phone: '0236 3584 606',
+				optimized: false
+			}
+		];
+	//- script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCHvmyTralDp2Y0m7zEiN185u1vtArcC5s")

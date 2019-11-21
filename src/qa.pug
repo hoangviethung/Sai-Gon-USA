@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Q&A'
+	- let bodyClass = 'qa-page'
+
+block banner,breadcrumb
+block main
+	+banner("./asset/image/banner/news.jpg", title)
+	include _components/qa/q-1
+	include _components/_layout/_trial-learning-2
+block scripts

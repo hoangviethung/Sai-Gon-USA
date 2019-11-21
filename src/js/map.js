@@ -1,5 +1,5 @@
 const GGMapInit = () => {
-	const mapSelector = document.querySelector('#map');
+	const mapSelector = document.getElementById('map');
 	const dealerLocatorList = document.querySelector('.dealer-locator-list .list');
 
 	if (mapSelector) {
@@ -84,7 +84,7 @@ const GGMapInit = () => {
 					map: map,
 					title: location.name,
 					position: locationLatLng,
-					icon: './assets/icons/marker-icon.svg',
+					icon: './asset/image/icon/marker_icon.svg',
 				});
 				bounds.extend(marker.position);
 				markers.push(marker);
@@ -108,31 +108,32 @@ const GGMapInit = () => {
 			})
 		};
 
-		const getLocationList = () => {
-			if (dealerLocatorList) {
-				dealerLocatorList.innerHTML = '';
-				markers.forEach((marker, index) => {
-					if (map.getBounds().contains(marker.getPosition())) {
-						const newMarker = document.createElement('div');
-						newMarker.classList.add('dealer-locator-item');
-						newMarker.innerHTML = `
-							<h3>${locations[index].name}</h3>
-							<p>${locations[index].address}</p>
-							<p>${locations[index].phone}</p>
-						`;
-						newMarker.setAttribute('marker-id', `${index}`);
-						newMarker.addEventListener('click', () => {
-							itemClicked = index;
-							const markerIndex = newMarker.getAttribute('marker-id');
-							google.maps.event.trigger(markers[markerIndex], 'click');
-						});
-						dealerLocatorList.appendChild(newMarker);
-					}
-				});
-			}
-		};
+		// const getLocationList = () => {
+		// 	if (dealerLocatorList) {
+		// 		dealerLocatorList.innerHTML = '';
+		// 		markers.forEach((marker, index) => {
+		// 			if (map.getBounds().contains(marker.getPosition())) {
+		// 				const newMarker = document.createElement('div');
+		// 				newMarker.classList.add('dealer-locator-item');
+		// 				newMarker.innerHTML = `
+		// 					<h3>${locations[index].name}</h3>
+		// 					<p>${locations[index].address}</p>
+		// 					<p>${locations[index].phone}</p>
+		// 				`;
+		// 				newMarker.setAttribute('marker-id', `${index}`);
+		// 				newMarker.addEventListener('click', () => {
+		// 					itemClicked = index;
+		// 					const markerIndex = newMarker.getAttribute('marker-id');
+		// 					google.maps.event.trigger(markers[markerIndex], 'click');
+		// 				});
+		// 				dealerLocatorList.appendChild(newMarker);
+		// 			}
+		// 		});
+		// 	}
+		// };
 
 		const initialize = () => {
+
 			map = new google.maps.Map(mapSelector, mapOption);
 			addMarkers();
 			let listener = google.maps.event.addListener(map, 'idle', () => {
@@ -141,7 +142,7 @@ const GGMapInit = () => {
 				}
 				google.maps.event.removeListener(listener);
 			});
-			google.maps.event.addListener(map, 'bounds_changed', getLocationList);
+			// google.maps.event.addListener(map, 'bounds_changed', getLocationList);
 		};
 
 		google.maps.event.addDomListener(window, 'load', initialize);
