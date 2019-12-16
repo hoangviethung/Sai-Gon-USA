@@ -237,13 +237,29 @@
 
 .course-content {
 	.table-responsive {
-		table{
+		table {
 			margin-bottom: 20px;
 		}
+
 		span {
 			font-size: 20px;
 			font-style: italic;
 			color: map-get($mau, cam);
+		}
+
+		&::-webkit-scrollbar {
+			height: 5px;
+			background: darken(white, 20%);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: map-get($mau, main);
+		}
+
+		@media (max-width: 1024px) {
+			table {
+				margin-bottom: 10px;
+			}
 		}
 	}
 
@@ -289,6 +305,14 @@
 			p {
 				font-size: 16px;
 			}
+
+			table {
+
+				th,
+				td {
+					height: 60px;
+				}
+			}
 		}
 
 		@media (max-width: 767.98px) {
@@ -301,6 +325,14 @@
 
 			p {
 				font-size: 14px;
+			}
+
+			table {
+
+				th,
+				td {
+					height: 50px;
+				}
 			}
 		}
 	}

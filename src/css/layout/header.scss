@@ -278,7 +278,7 @@ header {
 			}
 
 			.bottom-header {
-				background: map-get($mau, main);
+				background: rgba(0,0,0,0.75);
 
 				.row.no-gutters {
 					height: 65px;

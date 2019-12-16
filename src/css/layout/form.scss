@@ -30,13 +30,13 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
-	font-size: 16px;
+	font-size: 18px;
 	height: 40px;
 	font-style: italic;
 	padding: 0 30px;
 
 	@media (max-width: 1199.98px) {
-		font-size: 15px;
+		font-size: 16px;
 	}
 
 	@media (max-width: 767.98px) {
@@ -80,7 +80,7 @@
 .btn-send {
 	background-color: map-get($mau, cam);
 	color: white;
-	font-size: 13px;
+	font-size: 15px;
 	font-family: 'SFU Futura', sans-serif;
 	text-transform: uppercase;
 

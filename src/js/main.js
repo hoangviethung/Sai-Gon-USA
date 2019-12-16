@@ -200,7 +200,7 @@ const certificateSlider = () => {
 }
 
 const fancyboxGallery = () => {
-	$('[data-fancybox]').fancybox({
+	$('[data-fancybox]').not('[data-src="#courses"]').fancybox({
 		hash: false,
 		toolbar: false,
 		thumbs: {
@@ -222,6 +222,21 @@ const fancyboxGallery = () => {
 	})
 }
 
+
+const customFancyboxCourse = () => {
+	var dataCourse;
+	$('[data-src="#courses"]').on('click', function() {
+		dataCourse = $(this).data().course
+	})
+
+	const bfShow = () => {
+		$('#courses').find('select').val(dataCourse)
+	}
+
+	$('[data-src="#courses"]').fancybox({
+		beforeShow: bfShow,
+	})
+}
 const QA = () => {
 	Array.from(document.querySelectorAll('.qa .qa-item .question')).forEach((item, index) => {
 		item.addEventListener('click', () => {
@@ -340,7 +355,7 @@ const WoWJs = () => {
 }
 
 const moveLanguage = () => {
-	return new Mapping('header .header-language',{
+	return new Mapping('header .header-language', {
 		mobileNode: 'header .header-search',
 		mobileMethod: 'insertAfter',
 		desktopNode: 'header .header-hotline',
@@ -363,10 +378,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	differencesSlider();
 	certificateSlider();
 	fancyboxGallery();
+	customFancyboxCourse();
 	QA();
 	learningCornerTab();
 	studentSlider();
-	
+
 	Loading();
 	WoWJs();
 });

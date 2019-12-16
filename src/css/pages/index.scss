@@ -91,7 +91,7 @@
 			right: 10%;
 
 			p {
-				font-size: 30px;
+				font-size: 40px;
 				font-weight: 700;
 				color: map-get($mau, main);
 				transition: all .4s linear;
@@ -126,7 +126,7 @@
 				margin-left: 75px;
 
 				p {
-					font-size: 28px;
+					font-size: 36px;
 				}
 
 				h2 {
@@ -138,7 +138,7 @@
 				max-width: 400px;
 
 				p {
-					font-size: 22px;
+					font-size: 32px;
 				}
 
 				h2 {
@@ -155,7 +155,7 @@
 				margin-top: 40px;
 
 				p {
-					font-size: 20px;
+					font-size: 24px;
 				}
 
 				h2 {
@@ -176,7 +176,7 @@
 				max-width: 220px;
 
 				p {
-					font-size: 16px;
+					font-size: 20px;
 					margin-bottom: 5px;
 				}
 
@@ -285,16 +285,17 @@
 
 .index-1 {
 	background: #F5F5F5;
+	padding: 100px 0;
 
 	.col-sect-title {
-		margin-bottom: 140px;
+		margin-bottom: 70px;
 
 		@media (max-width: 1199.98px) {
-			margin-bottom: 80px;
+			margin-bottom: 60px;
 		}
 
 		@media (max-width: 1024px) {
-			margin-bottom: 60px;
+			margin-bottom: 50px;
 		}
 
 		@media (max-width: 767.98px) {
@@ -305,8 +306,8 @@
 	.col-item {
 		.imgbox {
 			margin: 0 auto;
-			width: 265px;
-			height: 265px;
+			width: 210px;
+			height: 210px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -318,7 +319,7 @@
 
 			svg {
 				margin-bottom: 45px;
-				max-width: 145px;
+				max-width: 75px;
 
 				path {
 					transition: all .3s ease-out;
@@ -381,6 +382,15 @@
 		}
 	}
 
+	.list-items-wrapper {
+		max-width: 1040px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 1199.98px) {
+		padding: 70px 0;
+	}
+
 	@media (max-width: 1024px) {
 		.col-item {
 			.imgbox {
@@ -408,6 +418,8 @@
 	}
 
 	@media (max-width: 767.98px) {
+		padding: 40px 0;
+
 		.list-items {
 			margin-bottom: -30px;
 		}

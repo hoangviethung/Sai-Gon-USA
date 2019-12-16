@@ -26,38 +26,85 @@
 			width: 100%;
 			border-radius: 5px;
 			overflow: hidden;
-			background: black;
-			position: relative;
+			background: transparent;
 
 			img {
 				width: 100%;
 				transition: all .3s ease-out;
 			}
 
-			&:before {
-				position: absolute;
-				content: '';
-				top: 15px;
-				bottom: 15px;
-				left: 15px;
-				right: 15px;
-				border: 1px dashed map-get($mau, main);
-				border-radius: 5px;
-				opacity: 0;
-				transition: all .3s ease-out;
+			.button-wrapper {
+				.btn-register {
+					background-color: map-get($mau, cam);
+					color: white;
+					margin-bottom: 10px;
+				}
+
+				.btn-view {
+					background-color: map-get($mau, main);
+					color: white;
+				}
 			}
 
-			&:after {
-				background-image: url('../asset/image/icon/icon_read.png');
-				width: 70px;
-				height: 70px;
-				top: 50%;
-				left: 50%;
-				position: absolute;
-				transform: translate(-50%, -50%);
-				opacity: 0;
-				transition: all .3s ease-out;
-				content: '';
+			@media (min-width: 1025px) {
+				background: black;
+				position: relative;
+
+				&:before {
+					position: absolute;
+					content: '';
+					top: 15px;
+					bottom: 15px;
+					left: 15px;
+					right: 15px;
+					border: 1px dashed map-get($mau, main);
+					border-radius: 5px;
+					opacity: 0;
+					transition: all .3s ease-out;
+				}
+
+				.button-wrapper {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					background: rgba(0, 0, 0, .5);
+					opacity: 0;
+					transition: all .4s ease-in-out;
+
+					.btn {
+						width: 185px;
+					}
+				}
+			}
+
+			@media (max-width: 1024px) {
+				.button-wrapper {
+					.btn {
+						height: 35px;
+						width: 50%;
+						border-radius: 0;
+						padding: 0 10px;
+					}
+				}
+			}
+
+			@media (max-width: 767.98px) {
+				.button-wrapper {
+					.btn {
+						width: 100%;
+						height: 30px;
+					}
+
+					.btn-register {
+						margin-bottom: 0;
+					}
+				}
 			}
 		}
 
@@ -102,15 +149,15 @@
 
 		&:hover {
 			.imgbox {
-				img {
-					opacity: .5;
-				}
-
 				&:before {
 					opacity: 1;
 				}
 
 				&:after {
+					opacity: 1;
+				}
+
+				.button-wrapper {
 					opacity: 1;
 				}
 			}
@@ -218,5 +265,92 @@
 				}
 			}
 		}
+	}
+}
+
+.course-popup {
+	overflow: visible;
+	width: 100%;
+	max-width: 550px;
+	border-radius: 10px;
+	padding: 44px 75px;
+
+	.fancybox-close-small {
+		top: -44px;
+		background: black;
+		padding: 5px;
+		opacity: 1;
+
+		svg {
+			path {
+				fill: white;
+			}
+		}
+	}
+
+	.sect-title {
+		font-size: 28px;
+		margin-bottom: 60px;
+		text-transform: uppercase;
+
+		@media (max-width: 1359.98px) {
+			font-size: 25px;
+		}
+
+		@media (max-width: 1024px) {
+			font-size: 22px;
+		}
+
+		@media (max-width: 767.98px) {
+			font-size: 18px;
+		}
+	}
+
+	.form-group {
+		margin-bottom: 15px;
+
+		input[type='text'],
+		select {
+			height: 45px;
+			box-shadow: 0 3px 6px #E5E5E5;
+			width: 100%;
+			border: 0;
+			padding: 7px 25px;
+			border-radius: 50px;
+			color: darken(white, 45%);
+			font-size: 15px;
+			font-weight: 300;
+
+			&::placeholder {
+				color: darken(white, 45%);
+				font-size: 15px;
+			}
+		}
+
+		select {
+			background-image: url('../asset/image/arrow-down-2.png');
+			background-size: 26px 10px;
+			background-position: 97% 50%;
+			background-repeat: no-repeat;
+			appearance: none;
+			color: darken(white, 45%);
+			font-size: 15px;
+		}
+	}
+
+	.form-button {
+		.btn-register {
+			height: 45px;
+			width: 100%;
+			border: 0;
+			border-radius: 50px;
+			background: map-get($mau, cam);
+			color: white;
+			font-size: 15px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		padding: 25px 15px;
 	}
 }
