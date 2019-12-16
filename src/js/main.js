@@ -232,6 +232,8 @@ const customFancyboxCourse = () => {
 	const bfShow = () => {
 		if (dataCourse) {
 			$('#courses').find('select').val(dataCourse)
+		} else {
+			$('#courses').find('select').val('default')
 		}
 	}
 
