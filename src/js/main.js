@@ -230,10 +230,14 @@ const customFancyboxCourse = () => {
 	})
 
 	const bfShow = () => {
-		$('#courses').find('select').val(dataCourse)
+		if (dataCourse) {
+			$('#courses').find('select').val(dataCourse)
+		}
 	}
 
 	$('[data-src="#courses"]').fancybox({
+		hash: false,
+		closeExisting: true,
 		beforeShow: bfShow,
 	})
 }

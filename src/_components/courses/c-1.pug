@@ -3,30 +3,61 @@ section.courses.courses-list
 		h2.sect-title.center.tagline CHƯƠNG TRÌNH ĐÀO TẠO
 		.list-items.row-custom.clearfix
 			article.item
-				a(href="course-1.html")
+				.item-wrapper
 					.imgbox
-						img.lazyload.ofcv(data-src='./asset/image/index_course_1.jpg', alt='')
+						img.ofcv(src='./asset/image/index_course_1.jpg', alt='')
+						.button-wrapper
+							a(href="#" data-src="#courses" data-fancybox="course1" data-course="1").btn.btn-register Đăng ký ngay
+							a(href="course-1.html").btn.btn-view Xem thêm
 					.text
 						h3 Kindy Program
 						p Aged: 3 – 6
 			article.item
-				a(href="course-2.html")
+				.item-wrapper
 					.imgbox
-						img.lazyload.ofcv(data-src='./asset/image/index_course_2.jpg', alt='')
+						img.ofcv(src='./asset/image/index_course_2.jpg', alt='')
+						.button-wrapper
+							a(href="#" data-src="#courses" data-fancybox="course2" data-course="2").btn.btn-register Đăng ký ngay
+							a(href="course-2.html").btn.btn-view Xem thêm
 					.text
 						h3 Secondary Program
 						p Aged: 12 – 15
 			article.item
-				a(href="course-3.html")
+				.item-wrapper
 					.imgbox
-						img.lazyload.ofcv(data-src='./asset/image/index_course_4.jpg', alt='')
+						img.ofcv(src='./asset/image/index_course_4.jpg', alt='')
+						.button-wrapper
+							a(href="#" data-src="#courses" data-fancybox="course3" data-course="3").btn.btn-register Đăng ký ngay
+							a(href="course-3.html").btn.btn-view Xem thêm
 					.text
 						h3 Primary Program
 						p Aged: 6 – 11
 			article.item
-				a(href="course-4.html")
+				.item-wrapper
 					.imgbox
-						img.lazyload.ofcv(data-src='./asset/image/index_course_3.jpg', alt='')
+						img.ofcv(src='./asset/image/index_course_3.jpg', alt='')
+						.button-wrapper
+							a(href="#" data-src="#courses" data-fancybox="course4" data-course="4").btn.btn-register Đăng ký ngay
+							a(href="course-4.html").btn.btn-view Xem thêm
 					.text
 						h3 Higher Secondary/ Young Adult Program
 						p Aged: 16 +
+	.d-none
+		#courses.course-popup
+			h2.sect-title.center.tagline Đăng ký khóa học
+			form
+				.form-group
+					input(type="text", name="Fullname" placeholder="Họ tên(*)")
+				.form-group
+					input(type="text", name="Phone" placeholder="Số điện thoại(*)")
+				.form-group
+					input(type="text", name="Email" placeholder="Email")
+				.form-group.form-select
+					select
+						option -- Chọn khóa học --
+						option(value=1) Kindy Program
+						option(value=2) Secondary Program
+						option(value=3) Primary Program
+						option(value=4) Higher Secondary/ Young Adult Program
+				.form-button
+					button.btn.btn-register Đăng ký
