@@ -154,9 +154,10 @@ header {
 					z-index: 2;
 				}
 
-				.item-sub {
+				.nav-item {
 					padding: 0 20px;
 					position: relative;
+					width: 100%;
 
 					&:before {
 						position: absolute;
@@ -191,7 +192,7 @@ header {
 
 			}
 
-			.nav-item {
+			>.nav-item {
 				position: relative;
 
 				&:hover {
@@ -466,7 +467,7 @@ header {
 					padding-left: 20px;
 					display: none;
 
-					.item-sub {
+					.nav-item {
 						a {
 							text-transform: capitalize;
 						}

@@ -222,7 +222,6 @@ const fancyboxGallery = () => {
 	})
 }
 
-
 const customFancyboxCourse = () => {
 	var dataCourse;
 	$('[data-src="#courses"]').on('click', function() {
@@ -243,6 +242,7 @@ const customFancyboxCourse = () => {
 		beforeShow: bfShow,
 	})
 }
+
 const QA = () => {
 	Array.from(document.querySelectorAll('.qa .qa-item .question')).forEach((item, index) => {
 		item.addEventListener('click', () => {
@@ -369,6 +369,23 @@ const moveLanguage = () => {
 	})
 }
 
+const generateHTMLFooterNavList = () => {
+	const navItems = Array.from(document.querySelectorAll('.footer-navigation .row a'))
+	const numberCol = Math.ceil(navItems.length / 3);
+
+	let result = '';
+	for (let i = 0; i < numberCol; i++) {
+		let colHTML = '';
+		for (let j = 0; j < 3; j++) {
+			if (navItems[i * 3 + j]) {
+				colHTML += navItems[i * 3 + j].outerHTML;
+			}
+		}
+		result += `<div class="col-lg-3"><nav>${colHTML}</nav></div>`;
+	}
+	document.querySelector('.footer-navigation .row').innerHTML = result;
+}
+
 // Execute functions when document ready here
 document.addEventListener('DOMContentLoaded', () => {
 	moveLanguage();
@@ -388,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	QA();
 	learningCornerTab();
 	studentSlider();
-
+	generateHTMLFooterNavList();
 	Loading();
 	WoWJs();
 });
