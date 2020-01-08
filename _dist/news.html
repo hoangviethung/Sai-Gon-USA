@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tin tức - Sự kiện</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700&amp;display=swap&amp;subset=vietnamese">
+		<link rel="stylesheet" href="./css/core.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<div id="loading">
+			<div class="logo-loader"><img src="./asset/loading.gif" alt=""></div>
+			<div class="progstat-wrapper">Loading:<span id="progstat">0</span>%</div>
+			<div id="progress"></div>
+		</div>
+		<header>
+			<div class="desktop top-header">
+				<div class="container">
+					<div class="row no-gutters">
+						<nav class="header-social"><a href="#">+ facebook</a><a href="#">+ instagram</a></nav>
+						<div class="header-hotline"><a href="tel:0123456789">+ 0123 456 789</a></div>
+						<div class="header-language">
+							<select>
+								<option value="vn">VN</option>
+								<option value="en">EN</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-header">
+				<div class="mobile header-toggle toggle-off">
+					<div class="hamburger"><span></span><span></span></div>
+				</div>
+				<div class="container">
+					<div class="row no-gutters">
+						<div class="header-logo"><a class="logo-1 desktop" href="http://web1.web4gsolutions.com/SAIGONusa/"><img class="lazyload" data-src="./asset/image/logo.png" alt=""></a><a class="logo-2" href="http://web1.web4gsolutions.com/SAIGONusa/"><img class="lazyload" data-src="./asset/image/logo.png" alt=""></a></div>
+						<nav class="header-navigation">
+							<div class="nav-item"><a href="http://web1.web4gsolutions.com/SAIGONusa/">Trang chủ</a></div>
+							<div class="nav-item"><a href="#">Giới thiệu</a>
+								<div class="mobile nav-sub-toggle"></div>
+								<div class="nav-sub">
+									<div class="item-sub"><a href="differences.html">Sự khác biệt</a></div>
+									<div class="item-sub"><a href="certificates.html">Chứng nhận</a></div>
+									<div class="item-sub"><a href="aboutus.html">Giới thiệu chung</a></div>
+									<div class="item-sub"><a href="vision.html">Tầm nhìn - Sứ mệnh</a></div>
+								</div>
+							</div>
+							<div class="nav-item"><a href="courses.html">CHƯƠNG TRÌNH HỌC</a>
+								<div class="mobile nav-sub-toggle"></div>
+								<div class="nav-sub">
+									<div class="item-sub"><a href="course-1.html">KINDY PROGRAM</a></div>
+									<div class="item-sub"><a href="course-2.html">PRIMARY PROGRAM</a></div>
+									<div class="item-sub"><a href="course-3.html">SECONDARY PROGRAM</a></div>
+									<div class="item-sub"><a href="course-4.html">HIGHER SECONDARY</a></div>
+								</div>
+							</div>
+							<div class="nav-item"><a href="student.html">GÓC HỌC VIÊN</a></div>
+							<div class="nav-item"><a href="news.html">TIN TỨC – SỰ KIỆN</a></div>
+							<div class="nav-item"><a href="#">LIÊN HỆ</a>
+								<div class="mobile nav-sub-toggle"></div>
+								<div class="nav-sub">
+									<div class="item-sub"><a href="contact-1.html">Tư vấn</a></div>
+									<div class="item-sub"><a href="contact-2.html">Đặt lịch</a></div>
+								</div>
+							</div>
+						</nav>
+						<div class="header-search">
+							<div class="icon desktop"><svg xmlns="http://www.w3.org/2000/svg" width="26.603" height="26.606" viewBox="0 0 26.603 26.606"><g transform="translate(-1701.706 -78.89)"><path d="M21.338,2.58A8.661,8.661,0,0,1,9.54,15.247L8.508,16.279,9.56,17.33a.614.614,0,0,1,0,.869L4.635,23.123A2.715,2.715,0,1,1,.8,19.284L5.72,14.359a.614.614,0,0,1,.869,0L7.64,15.41l1.031-1.032A8.661,8.661,0,0,1,21.338,2.58ZM22.647,8.7a7.432,7.432,0,1,0-2.177,5.255A7.385,7.385,0,0,0,22.647,8.7ZM7.383,18.638l.873-.874-2.1-2.1-.874.873ZM3.766,22.255l2.748-2.748-2.1-2.1L1.664,20.152a1.487,1.487,0,1,0,2.1,2.1Z" transform="translate(1701.658 102.581) rotate(-83)" fill="#fff"/><path d="M207.925,58.86a6,6,0,1,1-8.483,0A5.979,5.979,0,0,1,207.925,58.86Zm-.869,7.615a4.77,4.77,0,1,0-6.746,0A4.776,4.776,0,0,0,207.057,66.475Z" transform="translate(1624.697 283.017) rotate(-83)" fill="#fff"/></g></svg></div>
+							<form class="header-search-form">
+								<input class="form-control" type="text" placeholder="Tìm kiếm...">
+								<button class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="26.603" height="26.606" viewBox="0 0 26.603 26.606"><g transform="translate(-1701.706 -78.89)"><path d="M21.338,2.58A8.661,8.661,0,0,1,9.54,15.247L8.508,16.279,9.56,17.33a.614.614,0,0,1,0,.869L4.635,23.123A2.715,2.715,0,1,1,.8,19.284L5.72,14.359a.614.614,0,0,1,.869,0L7.64,15.41l1.031-1.032A8.661,8.661,0,0,1,21.338,2.58ZM22.647,8.7a7.432,7.432,0,1,0-2.177,5.255A7.385,7.385,0,0,0,22.647,8.7ZM7.383,18.638l.873-.874-2.1-2.1-.874.873ZM3.766,22.255l2.748-2.748-2.1-2.1L1.664,20.152a1.487,1.487,0,1,0,2.1,2.1Z" transform="translate(1701.658 102.581) rotate(-83)" fill="#fff"/><path d="M207.925,58.86a6,6,0,1,1-8.483,0A5.979,5.979,0,0,1,207.925,58.86Zm-.869,7.615a4.77,4.77,0,1,0-6.746,0A4.776,4.776,0,0,0,207.057,66.475Z" transform="translate(1624.697 283.017) rotate(-83)" fill="#fff"/></g></svg></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mobile bottom-header-mobile">
+				<div class="container">
+					<div class="row no-gutters">
+						<div class="header-logo"><a href="http://web1.web4gsolutions.com/SAIGONusa/"><img class="lazyload" data-src="./asset/image/logo.png" alt=""></a></div>
+						<div class="mobile header-toggle">
+							<div class="hamburger"><span></span><span></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay mobile"></div>
+		</header>
+		<main>
+			<div class="page-banner">
+				<div class="imgbox"><img class="lazyload" data-src="./asset/image/banner/news.jpg"/></div>
+				<div class="page-name">
+					<h2>Tin tức - Sự kiện</h2>
+				</div>
+			</div>
+			<section class="news sect-pd">
+				<div class="container">
+					<h2 class="sect-title center tagline">TIN TỨC - SỰ KIỆN</h2>
+					<div class="row news-list">
+						<div class="col-12">
+							<article class="news-item"><a href="news-dt.html">
+									<div class="imgbox"><img class="lazyload" src="./asset/image/news/n_1.jpg" alt=""/></div>
+									<div class="text">
+										<time>24.02.2019</time>
+										<h3>GIÁO DỤC NỮ GIỚI - CHÌA KHÓA CHO SỰ PHÁT TRIỂN BỀN VỮNG</h3>
+										<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+										<div class="img-readmore"><svg xmlns="http://www.w3.org/2000/svg" width="29.135" height="29.135" viewBox="0 0 29.135 29.135"><g transform="translate(-2262 -3237)"><path d="M29.135,1.147,29.1,1.126A7.033,7.033,0,0,0,25.627,0a7.033,7.033,0,0,0-3.469,1.125,5.486,5.486,0,0,1-2.679.924A5.489,5.489,0,0,1,16.8,1.126,7.031,7.031,0,0,0,13.331,0,7.032,7.032,0,0,0,9.862,1.126a5.49,5.49,0,0,1-2.678.924,5.488,5.488,0,0,1-2.679-.924A7.038,7.038,0,0,0,1.036,0,5.007,5.007,0,0,0,0,.109v1.7a3.511,3.511,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924A7.036,7.036,0,0,0,7.184,3.7a7.037,7.037,0,0,0,3.469-1.126,5.485,5.485,0,0,1,2.679-.924,5.487,5.487,0,0,1,2.678.923A7.036,7.036,0,0,0,19.479,3.7a7.036,7.036,0,0,0,3.469-1.126,5.488,5.488,0,0,1,2.679-.924,5.484,5.484,0,0,1,2.679.924c.265.145.541.295.83.437Z" transform="translate(2278.17 3237) rotate(90)" fill="#ffa217"/><path d="M919.162,476.541l-.039-.021a5.909,5.909,0,0,0-6.938,0,4.346,4.346,0,0,1-5.357,0,5.909,5.909,0,0,0-6.938,0,4.345,4.345,0,0,1-5.357,0,7.038,7.038,0,0,0-3.469-1.126,5.009,5.009,0,0,0-1.036.109v1.7a3.509,3.509,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924,5.908,5.908,0,0,0,6.938,0,4.346,4.346,0,0,1,5.357,0,5.909,5.909,0,0,0,6.939,0,4.346,4.346,0,0,1,5.357,0c.265.145.541.295.83.437Z" transform="translate(1371.973 2774.622)" fill="#ffa217"/></g></svg></div>
+									</div></a></article>
+						</div>
+						<div class="col-12">
+							<article class="news-item"><a href="news-dt.html">
+									<div class="imgbox"><img class="lazyload" src="./asset/image/news/n_2.jpg" alt=""/></div>
+									<div class="text">
+										<time>24.02.2019</time>
+										<h3>GIÁO DỤC NỮ GIỚI - CHÌA KHÓA CHO SỰ PHÁT TRIỂN BỀN VỮNG</h3>
+										<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+										<div class="img-readmore"><svg xmlns="http://www.w3.org/2000/svg" width="29.135" height="29.135" viewBox="0 0 29.135 29.135"><g transform="translate(-2262 -3237)"><path d="M29.135,1.147,29.1,1.126A7.033,7.033,0,0,0,25.627,0a7.033,7.033,0,0,0-3.469,1.125,5.486,5.486,0,0,1-2.679.924A5.489,5.489,0,0,1,16.8,1.126,7.031,7.031,0,0,0,13.331,0,7.032,7.032,0,0,0,9.862,1.126a5.49,5.49,0,0,1-2.678.924,5.488,5.488,0,0,1-2.679-.924A7.038,7.038,0,0,0,1.036,0,5.007,5.007,0,0,0,0,.109v1.7a3.511,3.511,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924A7.036,7.036,0,0,0,7.184,3.7a7.037,7.037,0,0,0,3.469-1.126,5.485,5.485,0,0,1,2.679-.924,5.487,5.487,0,0,1,2.678.923A7.036,7.036,0,0,0,19.479,3.7a7.036,7.036,0,0,0,3.469-1.126,5.488,5.488,0,0,1,2.679-.924,5.484,5.484,0,0,1,2.679.924c.265.145.541.295.83.437Z" transform="translate(2278.17 3237) rotate(90)" fill="#ffa217"/><path d="M919.162,476.541l-.039-.021a5.909,5.909,0,0,0-6.938,0,4.346,4.346,0,0,1-5.357,0,5.909,5.909,0,0,0-6.938,0,4.345,4.345,0,0,1-5.357,0,7.038,7.038,0,0,0-3.469-1.126,5.009,5.009,0,0,0-1.036.109v1.7a3.509,3.509,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924,5.908,5.908,0,0,0,6.938,0,4.346,4.346,0,0,1,5.357,0,5.909,5.909,0,0,0,6.939,0,4.346,4.346,0,0,1,5.357,0c.265.145.541.295.83.437Z" transform="translate(1371.973 2774.622)" fill="#ffa217"/></g></svg></div>
+									</div></a></article>
+						</div>
+						<div class="col-12">
+							<article class="news-item"><a href="news-dt.html">
+									<div class="imgbox"><img class="lazyload" src="./asset/image/news/n_1.jpg" alt=""/></div>
+									<div class="text">
+										<time>24.02.2019</time>
+										<h3>GIÁO DỤC NỮ GIỚI - CHÌA KHÓA CHO SỰ PHÁT TRIỂN BỀN VỮNG</h3>
+										<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+										<div class="img-readmore"><svg xmlns="http://www.w3.org/2000/svg" width="29.135" height="29.135" viewBox="0 0 29.135 29.135"><g transform="translate(-2262 -3237)"><path d="M29.135,1.147,29.1,1.126A7.033,7.033,0,0,0,25.627,0a7.033,7.033,0,0,0-3.469,1.125,5.486,5.486,0,0,1-2.679.924A5.489,5.489,0,0,1,16.8,1.126,7.031,7.031,0,0,0,13.331,0,7.032,7.032,0,0,0,9.862,1.126a5.49,5.49,0,0,1-2.678.924,5.488,5.488,0,0,1-2.679-.924A7.038,7.038,0,0,0,1.036,0,5.007,5.007,0,0,0,0,.109v1.7a3.511,3.511,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924A7.036,7.036,0,0,0,7.184,3.7a7.037,7.037,0,0,0,3.469-1.126,5.485,5.485,0,0,1,2.679-.924,5.487,5.487,0,0,1,2.678.923A7.036,7.036,0,0,0,19.479,3.7a7.036,7.036,0,0,0,3.469-1.126,5.488,5.488,0,0,1,2.679-.924,5.484,5.484,0,0,1,2.679.924c.265.145.541.295.83.437Z" transform="translate(2278.17 3237) rotate(90)" fill="#ffa217"/><path d="M919.162,476.541l-.039-.021a5.909,5.909,0,0,0-6.938,0,4.346,4.346,0,0,1-5.357,0,5.909,5.909,0,0,0-6.938,0,4.345,4.345,0,0,1-5.357,0,7.038,7.038,0,0,0-3.469-1.126,5.009,5.009,0,0,0-1.036.109v1.7a3.509,3.509,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924,5.908,5.908,0,0,0,6.938,0,4.346,4.346,0,0,1,5.357,0,5.909,5.909,0,0,0,6.939,0,4.346,4.346,0,0,1,5.357,0c.265.145.541.295.83.437Z" transform="translate(1371.973 2774.622)" fill="#ffa217"/></g></svg></div>
+									</div></a></article>
+						</div>
+						<div class="col-12">
+							<article class="news-item"><a href="news-dt.html">
+									<div class="imgbox"><img class="lazyload" src="./asset/image/news/n_2.jpg" alt=""/></div>
+									<div class="text">
+										<time>24.02.2019</time>
+										<h3>GIÁO DỤC NỮ GIỚI - CHÌA KHÓA CHO SỰ PHÁT TRIỂN BỀN VỮNG</h3>
+										<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+										<div class="img-readmore"><svg xmlns="http://www.w3.org/2000/svg" width="29.135" height="29.135" viewBox="0 0 29.135 29.135"><g transform="translate(-2262 -3237)"><path d="M29.135,1.147,29.1,1.126A7.033,7.033,0,0,0,25.627,0a7.033,7.033,0,0,0-3.469,1.125,5.486,5.486,0,0,1-2.679.924A5.489,5.489,0,0,1,16.8,1.126,7.031,7.031,0,0,0,13.331,0,7.032,7.032,0,0,0,9.862,1.126a5.49,5.49,0,0,1-2.678.924,5.488,5.488,0,0,1-2.679-.924A7.038,7.038,0,0,0,1.036,0,5.007,5.007,0,0,0,0,.109v1.7a3.511,3.511,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924A7.036,7.036,0,0,0,7.184,3.7a7.037,7.037,0,0,0,3.469-1.126,5.485,5.485,0,0,1,2.679-.924,5.487,5.487,0,0,1,2.678.923A7.036,7.036,0,0,0,19.479,3.7a7.036,7.036,0,0,0,3.469-1.126,5.488,5.488,0,0,1,2.679-.924,5.484,5.484,0,0,1,2.679.924c.265.145.541.295.83.437Z" transform="translate(2278.17 3237) rotate(90)" fill="#ffa217"/><path d="M919.162,476.541l-.039-.021a5.909,5.909,0,0,0-6.938,0,4.346,4.346,0,0,1-5.357,0,5.909,5.909,0,0,0-6.938,0,4.345,4.345,0,0,1-5.357,0,7.038,7.038,0,0,0-3.469-1.126,5.009,5.009,0,0,0-1.036.109v1.7a3.509,3.509,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924,5.908,5.908,0,0,0,6.938,0,4.346,4.346,0,0,1,5.357,0,5.909,5.909,0,0,0,6.939,0,4.346,4.346,0,0,1,5.357,0c.265.145.541.295.83.437Z" transform="translate(1371.973 2774.622)" fill="#ffa217"/></g></svg></div>
+									</div></a></article>
+						</div>
+						<div class="col-12">
+							<article class="news-item"><a href="news-dt.html">
+									<div class="imgbox"><img class="lazyload" src="./asset/image/news/n_1.jpg" alt=""/></div>
+									<div class="text">
+										<time>24.02.2019</time>
+										<h3>GIÁO DỤC NỮ GIỚI - CHÌA KHÓA CHO SỰ PHÁT TRIỂN BỀN VỮNG</h3>
+										<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+										<div class="img-readmore"><svg xmlns="http://www.w3.org/2000/svg" width="29.135" height="29.135" viewBox="0 0 29.135 29.135"><g transform="translate(-2262 -3237)"><path d="M29.135,1.147,29.1,1.126A7.033,7.033,0,0,0,25.627,0a7.033,7.033,0,0,0-3.469,1.125,5.486,5.486,0,0,1-2.679.924A5.489,5.489,0,0,1,16.8,1.126,7.031,7.031,0,0,0,13.331,0,7.032,7.032,0,0,0,9.862,1.126a5.49,5.49,0,0,1-2.678.924,5.488,5.488,0,0,1-2.679-.924A7.038,7.038,0,0,0,1.036,0,5.007,5.007,0,0,0,0,.109v1.7a3.511,3.511,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924A7.036,7.036,0,0,0,7.184,3.7a7.037,7.037,0,0,0,3.469-1.126,5.485,5.485,0,0,1,2.679-.924,5.487,5.487,0,0,1,2.678.923A7.036,7.036,0,0,0,19.479,3.7a7.036,7.036,0,0,0,3.469-1.126,5.488,5.488,0,0,1,2.679-.924,5.484,5.484,0,0,1,2.679.924c.265.145.541.295.83.437Z" transform="translate(2278.17 3237) rotate(90)" fill="#ffa217"/><path d="M919.162,476.541l-.039-.021a5.909,5.909,0,0,0-6.938,0,4.346,4.346,0,0,1-5.357,0,5.909,5.909,0,0,0-6.938,0,4.345,4.345,0,0,1-5.357,0,7.038,7.038,0,0,0-3.469-1.126,5.009,5.009,0,0,0-1.036.109v1.7a3.509,3.509,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924,5.908,5.908,0,0,0,6.938,0,4.346,4.346,0,0,1,5.357,0,5.909,5.909,0,0,0,6.939,0,4.346,4.346,0,0,1,5.357,0c.265.145.541.295.83.437Z" transform="translate(1371.973 2774.622)" fill="#ffa217"/></g></svg></div>
+									</div></a></article>
+						</div>
+						<div class="col-12">
+							<article class="news-item"><a href="news-dt.html">
+									<div class="imgbox"><img class="lazyload" src="./asset/image/news/n_2.jpg" alt=""/></div>
+									<div class="text">
+										<time>24.02.2019</time>
+										<h3>GIÁO DỤC NỮ GIỚI - CHÌA KHÓA CHO SỰ PHÁT TRIỂN BỀN VỮNG</h3>
+										<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+										<div class="img-readmore"><svg xmlns="http://www.w3.org/2000/svg" width="29.135" height="29.135" viewBox="0 0 29.135 29.135"><g transform="translate(-2262 -3237)"><path d="M29.135,1.147,29.1,1.126A7.033,7.033,0,0,0,25.627,0a7.033,7.033,0,0,0-3.469,1.125,5.486,5.486,0,0,1-2.679.924A5.489,5.489,0,0,1,16.8,1.126,7.031,7.031,0,0,0,13.331,0,7.032,7.032,0,0,0,9.862,1.126a5.49,5.49,0,0,1-2.678.924,5.488,5.488,0,0,1-2.679-.924A7.038,7.038,0,0,0,1.036,0,5.007,5.007,0,0,0,0,.109v1.7a3.511,3.511,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924A7.036,7.036,0,0,0,7.184,3.7a7.037,7.037,0,0,0,3.469-1.126,5.485,5.485,0,0,1,2.679-.924,5.487,5.487,0,0,1,2.678.923A7.036,7.036,0,0,0,19.479,3.7a7.036,7.036,0,0,0,3.469-1.126,5.488,5.488,0,0,1,2.679-.924,5.484,5.484,0,0,1,2.679.924c.265.145.541.295.83.437Z" transform="translate(2278.17 3237) rotate(90)" fill="#ffa217"/><path d="M919.162,476.541l-.039-.021a5.909,5.909,0,0,0-6.938,0,4.346,4.346,0,0,1-5.357,0,5.909,5.909,0,0,0-6.938,0,4.345,4.345,0,0,1-5.357,0,7.038,7.038,0,0,0-3.469-1.126,5.009,5.009,0,0,0-1.036.109v1.7a3.509,3.509,0,0,1,1.036-.159,5.488,5.488,0,0,1,2.679.924,5.908,5.908,0,0,0,6.938,0,4.346,4.346,0,0,1,5.357,0,5.909,5.909,0,0,0,6.939,0,4.346,4.346,0,0,1,5.357,0c.265.145.541.295.83.437Z" transform="translate(1371.973 2774.622)" fill="#ffa217"/></g></svg></div>
+									</div></a></article>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<ul class="pagination">
+								<li class="pagination-prev"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="5.395" height="10.477" viewBox="0 0 5.395 10.477"><path d="M4.091,0,0,4.532,4.189,9.064" transform="translate(0.5 0.706)" fill="rgba(0,0,0,0)" stroke="#888" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></svg></a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li class="pagination-dot"><a href="#">...</a></li>
+								<li><a href="#">98</a></li>
+								<li class="pagination-next"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="5.395" height="10.477" viewBox="0 0 5.395 10.477"><path d="M4.091,0,0,4.532,4.189,9.064" transform="translate(0.5 0.706)" fill="rgba(0,0,0,0)" stroke="#888" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></svg></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="trial-learning">
+				<div class="container">
+					<h2 class="sect-title center">ĐĂNG KÍ TƯ VẤN HỌC THỬ MIỄN PHÍ</h2>
+					<div class="row row-center">
+						<div class="col-auto">
+							<form>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Họ và tên (*)">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Số điện thoại (*)">
+								</div>
+								<div class="form-group">
+									<select class="form-control">
+										<option value="none">Chương trình quan tâm</option>
+										<option value="course_1">Chương trình 1</option>
+										<option value="course_2">Chương trình 2</option>
+										<option value="course_3">Chương trình 3</option>
+									</select>
+								</div>
+								<div class="form-button">
+									<button class="btn btn-readmore">Gửi</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="news-page" id="js-page-verify" hidden></div>
+		</main>
+		<footer>
+			<div class="top-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 footer-logo"><a href="#"><img src="./asset/image/logo.png"></a></div>
+						<div class="col-lg footer-navigation">
+							<div class="row">
+								<div class="col-lg-auto col-6">
+									<nav><a href="gioithieu.html">Giới thiệu</a><a href="courses.html">Chương trình học</a><a href="student.html">Góc học viên</a></nav>
+								</div>
+								<div class="col-lg-auto col-6">
+									<nav><a href="news.html">Tin tức - Sự kiện</a><a href="contact-1.html">Liên hệ</a><a href="deals.html">Ưu đãi</a></nav>
+								</div>
+								<div class="col-lg-auto col-6">
+									<nav><a href="gallery-1.html">Hình ảnh</a><a href="gallery-2.html">Video</a><a href="qa.html">Q&A</a></nav>
+								</div>
+								<div class="col-lg-auto col-6">
+									<nav><a href="policy-1.html">Chính sách quy định</a><a href="#">Hỗ trợ hotline</a></nav>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 footer-subscribe">
+							<p>Hãy gửi email đến chúng tôi để nhận những thông báo mới nhất và những chương trình hấp dẫn nhất dành cho bạn.</p>
+							<form>
+								<input type="text" placeholder="Email">
+								<button class="btn btn-send">Gửi</button>
+							</form>
+							<nav class="footer-social"><a href="#">+ facebook</a><a href="#">+ instagram</a></nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-header">
+				<div class="container">
+					<p>© 2019 Copyright by <a href="https://web4gsolutions.com">Web4G Solutions </a>. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places&amp;key=AIzaSyCHvmyTralDp2Y0m7zEiN185u1vtArcC5s"></script>
+		<script type="text/javascript" src="./js/core.min.js"></script>
+		<script type="text/javascript" src="./js/main.min.js"></script>
+	</body>
+</html>
