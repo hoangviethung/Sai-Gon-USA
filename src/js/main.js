@@ -109,7 +109,6 @@ const staffSlider = () => {
 	return new Swiper('.differences-1-slider-wrapper .swiper-container', {
 		slidesPerView: 4,
 		spaceBetween: 45,
-		loop: true,
 		autoplay: {
 			delay: 4200,
 			disableOnInteraction: false,
