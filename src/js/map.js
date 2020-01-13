@@ -84,7 +84,7 @@ const GGMapInit = () => {
 					map: map,
 					title: location.name,
 					position: locationLatLng,
-					icon: './asset/image/icon/marker_icon.svg',
+					icon: location.icon,
 				});
 				bounds.extend(marker.position);
 				markers.push(marker);
