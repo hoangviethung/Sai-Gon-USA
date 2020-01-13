@@ -404,6 +404,32 @@ const getThumbnailVideo = () => {
 	})
 }
 
+
+const shareSocial = () => {
+	function amperoctoplus(s) {
+		s = s.replace(/&/g, '%26');
+		s = s.replace(/#/g, '%23');
+		s = s.replace(/\+/g, '%2B');
+		s = s.replace(/@/g, '%40');
+		s = s.replace(/:/g, '%3A');
+		return s;
+	}
+
+	let currentHREF = amperoctoplus(encodeURI(window.location.href));
+	if (document.querySelector('.social-share.facebook')) {
+		document.querySelector('.social-share.facebook').setAttribute('href', `https://www.facebook.com/sharer/sharer.php?u=${currentHREF}`);
+	}
+	if (document.querySelector('.social-share.twitter')) {
+		document.querySelector('.social-share.twitter').setAttribute('href', `https://twitter.com/intent/tweet?text=${currentHREF}`);
+	}
+	if (document.querySelector('.social-share.pinterest')) {
+		document.querySelector('.social-share.pinterest').setAttribute('href', `https://pinterest.com/pin/create/button/?url=${currentHREF}&media=&description=`);
+	}
+	if (document.querySelector('.social-linkedin a')) {
+		document.querySelector('.social-linkedin a').setAttribute('href', `https://www.linkedin.com/shareArticle?mini=true&url=${currentHREF}&title=&summary=&source=`);
+	}
+}
+
 // Execute functions when document ready here
 document.addEventListener('DOMContentLoaded', () => {
 	getThumbnailVideo();
@@ -421,6 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	certificateSlider();
 	fancyboxGallery();
 	customFancyboxCourse();
+	shareSocial();
 	QA();
 	learningCornerTab();
 	studentSlider();
