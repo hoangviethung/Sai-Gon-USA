@@ -27,19 +27,19 @@
 		}
 	}
 
-	a[data-fancybox] {
-		display: block;
+	.video {
 		position: relative;
+	}
 
-		.button-play {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 175px;
-			height: 175px;
-			z-index: 2;
-			transform: translate(-50%, -50%);
+	.button-play {
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 175px;
+		height: 175px;
+		z-index: 2;
+		transform: translate(-50%, -50%);
 
-		}
 	}
 }
